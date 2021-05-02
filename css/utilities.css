@@ -1,0 +1,252 @@
+
+/*This style is applicable to all the elements*/
+*{
+
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	/*border: 1px solid;*/
+}
+
+/*The color variable*/
+:root {
+ --primary-color: #0c695f;
+ --secondary-color:#28a68f;
+ --form-background-color:#dfe8e4;
+}
+
+/*General Styling for body elements*/
+body{
+
+	font-family: 'Lato', 'Roboto',sans-serif;
+	color: #333;
+	line-height: 1.6;
+}
+
+/*General Styling for ul elements*/
+ul{
+
+	list-style-type: none;
+}
+
+/*General Styling for anchor elements*/
+a{
+
+	text-decoration: none;
+	color: #333;
+	font-weight: bold;
+}
+
+/*General Styling for H1 and H2 heading*/
+h1, h2, h3 {
+	font-weight: 300;
+	line-height: 1.2;
+	margin: 10px 0;
+
+}
+
+/*General Styling for paragraph element*/
+p{
+	margin: 10px 0;
+}
+
+/*General styling for image elements*/
+img{
+	width: 100%; /*keeps the image within the container*/
+}
+
+footer{
+
+	background-color: var(--primary-color);
+}
+
+/*table, th, td{
+	border:1px solid;
+}*/
+/*Text classes*/
+
+.text-center{
+	text-align: center;
+}
+
+/*checkboxes*/
+
+.side-menu1 checkbox{
+
+}
+
+/*inputs formatting General*/
+
+.input-box{
+	border: 0;
+  border-bottom: 1px solid;
+  border-color: var(--primary-color);
+  outline: 0;
+  font-size: 1rem;
+  padding: 10px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+
+/*buttons formatting*/
+
+.btn {
+	display: inline-block;
+	padding: 10px 30px;
+	cursor: pointer;
+	background: var(--primary-color);
+	border:none;
+	border-radius: 5px;
+
+}
+
+/*dropdown formatting*/
+
+.drop_down{
+	border:none;
+	border-bottom: 1px solid;
+	border-bottom-color: var(--primary-color);
+	width: 100%;
+	font-size: 0.9rem;
+	text-align: center;
+	
+}
+
+
+
+/*margin top and botton*/
+
+.my-1s{
+	margin: 0.2rem 0; /* adds margin on top and bottom to the side bar menu items */
+}
+
+.my-1{
+	margin: 1rem 0;
+}
+
+.my-2{
+	margin: 1.5rem 1.5rem;
+}
+
+.my-3{
+	margin: 2rem 2rem;
+}
+
+.my-4{
+	margin: 3rem 3rem;
+}
+
+.my-5{
+	margin: 4rem 4rem;
+}
+
+/*margin on both sides*/
+
+.m-1{
+	margin: 1rem;
+}
+
+.m-2{
+	margin: 1.5rem;
+}
+
+.m-3{
+	margin: 2rem;
+}
+
+.m-4{
+	margin: 3rem;
+}
+
+.m-5{
+	margin: 4rem;
+}
+
+/*margin bottom*/
+
+.mb-1{
+	margin-bottom: 5px;
+}
+.mb-2{
+	margin-bottom: 10px;
+}
+
+/*margin left*/
+.ml-1{
+	margin-left: 5px;
+}
+
+.ml-2{
+	margin-left: 10px;
+}
+
+.ml-3{
+	margin-left: 15px;
+}
+.ml-4{
+	margin-left: 20px;
+}
+/*padding top and bottom*/
+
+.py-1{
+	padding: 1rem 1rem;
+}
+
+.py-2{
+	padding: 1.5rem 1.5rem;
+}
+
+.py-3{
+	padding: 2rem 2rem;
+}
+
+.py-4{
+	padding: 3rem 3rem;
+}
+
+.py-5{
+	padding: 4rem 4rem;
+}
+
+/*padding on all sides*/
+
+.p-1{
+	padding: 1rem;
+}
+
+.p-2{
+	padding: 1.5rem;
+}
+
+.p-3{
+	padding: 2rem;
+}
+
+.p-4{
+	padding: 3rem;
+}
+
+.p-5{
+	padding: 4rem;
+}
+/*padding on left sides*/
+
+.pl-1{
+	margin-left: 0.2rem;
+}
+.pl-2{
+	padding-left: 0.5rem;
+}
+
+.pl-3{
+	padding-left: 1rem;
+}
+
+.pl-4{
+	padding-left: 3rem;
+}
+
+.pl-5{
+	padding-left: 4rem;
+}

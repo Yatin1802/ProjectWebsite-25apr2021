@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Site Name | Portal</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale = 1.0">
+	<meta charset="UTF-8">
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/utilities.css">
+	<link rel="stylesheet" type="text/css" href="css/medical_app_style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+	
+	<script type="text/javascript" src="js/medical.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/rateListDB.js"></script>
+
+</head>
+<body>
+
+		<!-- The Edit Modal Dialog Box -->
+	<div id="myModal" class="modal">
+
+	  <!-- Modal content -->
+	  <div class="modal-content">
+	  	<h2 class="dlgTitle">Table Row Edit Form</h2>
+	    <span class="close">&times;</span>
+	    <div style="display: flex; flex-direction: column; align-items: space-between;">
+	    	
+	    	<label for="edit_input_investigation" class="editFormLabel">Investigation/Treatment</label>
+		    <input class="dlgBox input-box input-box-1 mb-2" list="test-name" name="input_investigation" id="edit_input_investigation" placeholder="Test/Treatment Name">
+
+		    <label for="edit_input_expenditure" class="editFormLabel">Actual Expenditure</label>
+			<input class="dlgBox input-box input-box-2 mb-2 ml-4" type="input" name="input_expenditure" id="edit_input_expenditure" placeholder="Expenditure Incurred">
+
+			<label for="edit_input_admissible" class="editFormLabel">Admissible Expenditure</label>
+			<input class="dlgBox input-box input-box-2 mb-2 ml-4" type="input" name="input_admissible" id="edit_input_admissible" placeholder="Admissible Amount">
+
+			<!-- <label for="remarks"></label> -->
+			<input class="input-box input-box-2 mb-2 ml-3" type="input" name="input_remarks" id="edit_remarks" placeholder="Remarks">
+			<!-- <select class="drop_down drop_down_input mb-2 ml-4 dlgRemarks" name="remarks" id="edit_remarks">
+				<option value="" disabled="true" selected="true"> Remarks</option>
+				<option value="as_per_CGHS">As per CGHS rates</option>
+				<option value="inadmissible">Inadmissible</option>
+				<option value="test_not_endorsed">Test/treatment not endorsed</option>
+				<option value="as_per_actual">As per Actual</option>
+			</select> -->
+	    </div>
+	   
+
+			<div class="control_options control_flex dlgBtn">
+			
+			<button class="btn btn_control" type="button" id="done">Done</button>
+			<!-- <button type="button">Add to Table</button> -->
+
+
+		</div>
+	  	
+	  </div>
+
+	</div>
+
+
+	<!-- Navbar -->
+	<div class="navbar">
+		
+		<div class="container flex-nav">
+			
+			<!-- <img src="images/CSS_logo.png" height="80"> -->
+			<h1 class="site-logo m-2">Site Name</h1>
+			
+			<nav>
+				
+				<ul>
+					<li><a  href="home.html" target="_blank">Home</a></li>
+					<li><a  href="aboutus.html" target="_blank">About Us</a></li>
+
+				</ul>
+			</nav>
+
+		</div>
+	</div>
+
+	<!-- GRID -->
+
+	<div class="grid-container" style="overflow: scroll;">
+		
+		<!-- SIDE BAR STARTS -->
+		
+		<div class="side-bar">
+			
+			<div class="side-menu1 side-menu-flex my-1s" >
+				
+				<div class="sb-item1">
+					<input type="checkbox" id="A"><i class="fas fa-calculator"></i>
+					<label class="sb-item-text" for="A">Widgets</label>
+					<ul >
+						<li><a href="#">Medical Bill App</a></li>
+						<li><a href="#">Income Tax Calculator</a></li>
+						<li><a href="#">LTC fare Calculator</a></li>
+					</ul>
+					<!-- <h4 class="pl-2"></h5> -->
+				</div>
+				
+			</div>
+
+			<div class="side-menu1 side-menu-flex my-1s" >
+				
+				<div class="sb-item2">
+					<input type="checkbox" id="B"><i class="fas fa-plane-departure"></i>
+					<label class="sb-item-text" for="B">LTC</label>
+					<ul>
+						<li><a href="#">Important Rules</a></li>
+						<li><a href="#">LTC Fare Table</a></li>
+						<li><a href="#">Other Information</a></li>
+					</ul>
+					<!-- <h4 class="pl-2"></h5> -->
+				</div>
+				
+			</div>
+
+			<div class="side-menu1 side-menu-flex my-1s" >
+				
+				<div class="sb-item3">
+					<input type="checkbox" id="C"><i class="fas fa-hand-holding-medical"></i>
+					<label class="sb-item-text" for="C">CGHS Guidelines</label>
+					<ul>
+						<li><a href="#">Important Rules</a></li>
+						<li><a href="#">CGHS Rate List</a></li>
+						<li><a href="#">Search Hospital</a></li>
+					</ul>
+					<!-- <h4 class="pl-2"></h5> -->
+				</div>
+				
+			</div>
+
+			<div class="side-menu1 side-menu-flex my-1s" >
+				
+				<div class="sb-item4">
+					<input type="checkbox" id="D"><i class="fas fa-rupee-sign"></i>
+					<label class="sb-item-text" for="D">Pay Fixation</label>
+					<ul>
+						<li><a href="#">Important Rules</a></li>
+						<li><a href="#">MACP Guide</a></li>
+						<li><a href="#">Pay Matrix</a></li>
+						<li><a href="#">Other Info</a></li>
+					</ul>
+					<!-- <h4 class="pl-2"></h5> -->
+				</div>
+				
+			</div>
+
+			<div class="side-menu1 side-menu-flex my-1s" >
+				
+				<div class="sb-item5">
+					<input type="checkbox" id="E"><i class="fas fa-blind"></i>
+					<label class="sb-item-text" for="E">Pensioner's Guide</label>
+					<ul>
+						<li><a href="#">Bhavishya Portal</a></li>
+						<li><a href="#">Other Info</a></li>
+					</ul>
+					<!-- <h4 class="pl-2"></h5> -->
+				</div>
+				
+			</div>
+			
+			<div class="side-menu1 side-menu-flex my-1s" >
+				
+				<div class="sb-item6">
+					<input type="checkbox" id="F"><i class="fas fa-coins"></i>
+					<label class="sb-item-text" for="F">Allowances</label>
+					<ul>
+						<li><a href="#">TA Rules</a></li>
+						<li><a href="#">Other Info</a></li>
+					</ul>
+					<!-- <h4 class="pl-2"></h5> -->
+				</div>
+				
+			</div>
+
+		</div>
+
+		<!-- SIDE BAR ENDS -->
+		<div class="medical_app my-1 p-1">
+			
+
+			<div>
+				
+
+			</div>
+			<div class="medical_container">
+				
+				<form class="form_control form_display">
+
+					<!-- <div class="input-box-name"> -->
+						<input class="input-box mb-2" type="input" name="input_name" id="input_name" placeholder="Patient's Name">
+
+						<!-- Drop down for selecting entitlement -->
+						<!-- <div> -->
+						<!-- <label for="entitlement">Entitlement</label> -->
+						<select class="drop_down drop_down_input mb-2 ml-4" name="entitlement" id="entitlement">
+							<option value="" disabled="true" selected="true"> Select Entitlement</option>
+							<option value="Private">Private</option>
+							<option value="Semi-Private">Semi-Private</option>
+							<option value="General">General</option>
+							
+						</select>
+
+						<!-- </div> -->
+						
+  					<!-- </div> -->
+						
+					
+  					<!-- <div class="hosp_details ml-3"> -->
+  						
+						<input class="input-box mb-2 ml-4" type="input" name="input_hosp" id="input_hosp" placeholder="Hospital's Name">
+
+						<!-- <div> -->
+						<select class="drop_down drop_down_input mb-2 ml-4" name="hosp_details" id="accreditation">
+							<option value="" disabled="true" selected="true"> Accreditation</option>
+							<option value="nabh">NABH</option>
+							<option value="non-nabh">Non-NABH</option>
+							<!-- <option value="General">General</option> -->
+							
+						</select>
+
+						<!-- </div> -->
+
+  					<!-- </div> -->
+				
+
+				</form>
+
+			<div class="input_area form_display">
+				
+				<div style="display: flex; flex-direction: column;">
+					
+					<input class="input-box input-box-1 mb-2" list="test-name" name="input_investigation" id="input_investigation" placeholder="Test/Treatment Name" required="true">
+					<span>
+						<label for="quantity" style="margin-right: 20px; margin-left: 20px;">Quantity:</label>
+	  					<input class="input-box mb-2 input_qty" type="number" id="quantity" name="quantity" min="1" max="20" value="1" step="1" style="text-align: center;padding-bottom: 0;">
+					</span>
+					
+				</div>
+				
+
+				<div style="display: flex; flex-direction: column;">
+					<input class="input-box input-box-2 mb-2 ml-4" type="input" name="input_expenditure" id="input_expenditure" placeholder="Expenditure Incurred">
+
+					<span class="input-box ml-4" style="border:none;">
+						<label for="chkBox"> Restrict as per Entitlement</label>
+	  					<input  type="checkbox" id="chkBoxEntitlement" name="restrict" value="restrict" style="display: inline;">
+					</span>
+
+				</div>
+				
+
+				<input class="input-box input-box-2 mb-2 ml-4" type="input" name="input_admissible" id="input_admissible" placeholder="Admissible Amount">
+
+				<!-- <label for="remarks"></label> -->
+
+				<select class="drop_down drop_down_input mb-2 ml-3 my-1" name="remarks" id="remarks" style="padding-bottom: 5px;">
+					<option value="" disabled="true" selected="true"> Remarks</option>
+					<option value="as_per_CGHS">As per CGHS rates</option>
+					<option value="inadmissible">Inadmissible</option>
+					<option value="test_not_endorsed">Test/treatment not endorsed</option>
+					<option value="as_per_actual">As per Actual</option>
+				</select>
+
+			</div>
+
+			<!-- medical table -->
+			<!-- <div> -->
+				
+				<table class="medical_table" id="id_medical_table">
+					<caption class="table_caption">Medical Table</caption>
+					<thead>
+						<tr>
+						    <th>S.no.</th>
+						    <th style="width: 40%;">Description</th>
+						    <th style="width: 15%;">Expenditure Incurred</th>
+						    <th style="width: 15%;">Admissible Amount</th>
+						    <th style="width: 20%;">Remarks</th>
+						</tr>
+
+					</thead>	
+					
+					<tbody class="tableBody" id="id_tableBody">
+						
+						<!-- <tr>
+						 
+						</tr> -->
+
+					
+					</tbody>
+					
+				</table>	
+			<!-- </div> -->
+			
+
+				<!-- buttons -->
+				<div class="control_options control_flex" style="margin-top: 50px;">
+					
+					<button class="btn btn_control" type="button" id="add">Add to Table</button>
+					<button class="btn btn_control" type="button" id="save">Save</button>
+					<button class="btn btn_control" type="button" id ="copy">Copy</button>
+					<button class="btn btn_control" type="button" id="edit">Edit</button>
+					<button class="btn btn_control" type="button" id="insert">Insert Row</button>
+					<button class="btn btn_control" type="button" id="delete">Delete</button>
+					<!-- <button type="button">Add to Table</button> -->
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- footer -->
+
+	<footer>
+		
+		
+		<div class="footer-info container">
+			
+
+			<ul>
+				<li class="my-1"><a href="#">Contact Us</a></li>
+				<li class="my-1"><a href="#">About Us</a></li>
+				<li class="my-1"><a href="#">Join and Contribute</a></li>
+			</ul>
+	
+
+		</div>
+
+	</footer>
+
+	<!-- Datalist -->
+	<datalist id="test-name" class="datalistStyle">
+		
+			
+	</datalist>
+	
+	<!-- The actual toast pop up when copied successfully -->
+	<div id="copy_snackbar">Table Copied Successfully!</div>
+
+	<!-- The toast pop up when the editing is done successfully in table row edit form-->
+	<div id="edit_snackbar">Row Edited Successfully!</div>
+
+	<script>
+		
+		document.addEventListener('DOMContentLoaded',loadDataList);//This loads the datalist when page loads
+		
+		//when user types the test or treatment name in the datalist input
+		document.getElementById("input_investigation").addEventListener("input",fillUpOnSelection); 
+		
+		//When accreditation changes
+		document.getElementById("accreditation").addEventListener("input",rateUpdate); 
+
+		//This Highlights the row when clicked.
+		document.getElementById("id_medical_table").addEventListener("click",highlightRow); 
+
+		//When Add To Table button is clicked
+		document.getElementById("add").addEventListener("click",addToTable);
+
+		//When Delete Button is clicked
+		document.getElementById("delete").addEventListener("click",deleteRow);
+
+		//this copies the table into the clipboard which can be pasted in any editor
+		document.getElementById("copy").addEventListener("click",copyTable);
+
+		//this saves the html table into csv format
+		document.getElementById("save").addEventListener("click",saveAsCSV);
+
+		//this opens the custom edit dialog box which allows editing of selected row. 
+		document.getElementById("edit").addEventListener("click",editRow);
+
+		//this inserts the row at a place of row selected by user
+		document.getElementById("insert").addEventListener("click",insertRow);
+
+		//when user types the test or treatment name in the datalist input
+		document.getElementById("edit_input_investigation").addEventListener("input",edit_fillUpOnSelection); 
+
+		//once the edit in table form is completed, the data from the form is updated in the table
+		document.getElementById("done").addEventListener("click",editDone);
+
+		//This enables the addition of row in the table when the Enter Key is pressed
+		document.getElementById("input_investigation").addEventListener("keyup",addOnEnter);
+
+		//This updates the input expenditure/admissible when there is a change quantity
+		document.getElementById("quantity").addEventListener("change",rateUpdate);
+
+		//This check the Entitlement restricting checkbox and restricts the amount as per entitlement
+		document.getElementById("chkBoxEntitlement").addEventListener("click",rateUpdate);
+
+		// This updates the expenditure and admissible inputs as per entitlement... as selected from the entitlement drop down.
+		document.getElementById("entitlement").addEventListener("input",rateUpdate);
+
+
+		//Perhaps later 
+		// document.getElementById("id_medical_table").addEventListener("mouseover",highlightBackground);
+
+	</script>
+</body>
+</html>

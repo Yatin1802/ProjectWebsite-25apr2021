@@ -1,0 +1,209 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+/*navbar is the background of the navigation*/
+.navbar{
+
+	background-color: var(--primary-color);
+	color: white;
+	height: 100px;
+	border-bottom: solid;
+	border-bottom-width: 3px;
+	border-bottom-color: white;
+	box-shadow: 5px 10px 8px #888888;
+}
+
+
+/*This container class limits the overall view area of the website*/
+.container{
+	max-width: 1100px;
+	margin: 0 auto;/* margin auto centrally aligns the container*/
+	/*padding-right: 0 40px;*/
+
+}
+
+/*This is to give the tile effects to direct links*/
+.card{
+	background-color: white;
+	border-radius: 10px;
+	color: #333;
+	box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+	padding: 10px;
+	margin: 10px;
+}
+
+
+.flex-nav {
+
+	display: flex; /*This setting causes the site name and the nav items on the same block*/
+	justify-content: flex-end; /*site name and nav items go into opposite ends*/
+	align-items: center; /*vertically aligns the site name and nav items*/
+	height: 100%;
+}
+
+nav{
+	margin-left: auto; /*doing this puts the site name on left and nav elements on righ*/
+	font-size: 1.1rem;
+}	
+
+/*.flex-nav img{
+
+	flex-basis: 80px;
+}*/
+
+.flex-nav ul{
+	display: flex;
+}
+
+.flex-nav ul li a{
+	color: white;
+	margin-right: 10px;
+}
+
+nav>ul>li>a{
+	padding: 0;
+	margin: 20px;
+}
+
+nav a:hover{
+	font-size: 1.1rem;
+	border-bottom: solid;
+	border-bottom-color: white;
+	border-bottom-width: 3px; 
+}
+
+/*SIDE BAR LAYOUT*/
+
+/*This adds the top margin to the sidebar menu*/
+.side-bar{
+
+	padding-top: 10px;
+	/*background-color: var(--primary-color);*/
+	background-color: #28a68f;
+	color: white;
+}
+
+/*This puts the icon and menu text in flex container*/
+.side-menu-flex{
+	display: flex;
+	align-items: center;
+}
+
+.side-bar i,h4{
+	font-size: 1.2rem;
+	align-items: center;
+	/*font-weight: 400;*/
+}
+
+/*This is for the multi level dropdown in the sidebar*/
+.side-bar ul, input[type="checkbox"]{
+	display: none;  /*this hides the sub menu*/
+}
+
+.side-bar input:checked ~ ul{
+	display: block; /*This expands the sub menu of side bar on checking*/
+	margin:5px;
+}
+
+/*This adds indentation to the sub menu items */
+.sub-item1>ul, li a{
+	color: white;
+	padding-left: 3em;
+	font-weight: 300;
+	font-size: 1em;
+}
+
+
+.side-bar label:hover,a:hover{
+	
+	font-weight: bold; /*This accentuates the appearance of sub menu items when pointer hover over.*/
+
+}
+
+
+.sb-item-text{
+	font-size: 1.1em;
+	padding-left: 5px;
+	
+
+}
+.side-bar{
+	/*min-width: 200px;*/
+}
+
+.side-bar{
+	padding-left: 10px;
+	/*position: fixed;*/
+}
+/*---------------------*/
+
+/*GRID LAYOUT*/
+
+.grid-container{
+
+	display: grid;
+	grid-template-columns: 18% 75% 7%;
+	grid-gap: 5px;
+	overflow: hidden;
+}
+
+/*Content Area*/
+
+.welcome{
+	font-family: 'Roboto', sans-serif;
+}
+
+.direct-links h3{
+	margin: 20px;
+}
+
+.card-container{
+
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	max-width: 600px;
+	grid-gap: 10px;
+	margin: 0 auto;
+}
+
+.card-tile{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+		transition: transform 0.2s ease-in;
+
+}
+
+.card-tile h4{
+	font-size: 0.9em;
+}
+.card-tile:hover{
+
+     transform: translateY(-15px);
+}
+
+/*Image layout and dimensions*/
+
+.img-common{
+	height: 50px;
+	width: 50px;
+}
+.img-med{
+	width: 80px;
+}
+
+.img-pension{
+	height: 50px;
+	width: 40px;
+}
+
+/*FOOTER LAYOUT*/
+.footer{
+	height: 100px;
+}
+.footer-info ul{
+	display: flex;
+	justify-content: space-between;
+	color:white;
+	width: 500px;  /**/
+	margin: 0 auto;
+}
+
