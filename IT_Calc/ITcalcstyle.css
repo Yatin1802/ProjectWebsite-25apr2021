@@ -1,0 +1,392 @@
+
+.IT_container{
+  /*border: 1px solid;*/
+  display: grid;
+  /*justify-content: flex-start;*/
+
+  /*twelve columns for the IT content area*/
+  grid-template-areas: 
+  'input_field input_field input_field input_field input_field input_field input_field input_field input_field input_field input_field input_field'
+  'income_table income_table income_table income_table income_table income_table income_table income_table income_table income_table income_table info_area'
+  'deduction_table deduction_table deduction_table deduction_table deduction_table deduction_table deduction_table deduction_table deduction_table deduction_table deduction_table info_area'
+  'details details details details details details details details details details details details';
+  grid-gap: 5px;
+}
+
+/*This is the input area which sets the formatting for inputs */
+.inputDetails{
+/*  position: relative;
+*/grid-area: input_field;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin: auto;
+}
+
+/*Table containing the details of income*/
+.incomeDetails{
+  grid-area: income_table;
+  margin: auto;
+  width: 100%;
+}
+
+#deductionTable{
+  grid-area: deduction_table;
+  margin:auto;
+  border-collapse: collapse;
+  text-align: center;
+  width: 100%;
+  margin-top: 10px;
+
+}
+
+.info_area{
+  grid-area: info_area;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 150px;
+  margin-top: 20px;
+  padding-left: 5px;
+  align-items: flex-start;
+  
+}
+
+.sideInfo{
+  margin-left: 10px;
+  margin-bottom: 10px;
+  padding: 5px 3px;
+  border-left: 5px var(--primary-color) solid;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: #a7cfc5;
+  color: var(--primary-color);
+  font-size: 0.9em;
+  width: 100%;
+
+
+}
+
+/*The various buttons for adding other incomes such as personal pay, misc, arrears etc.*/
+.details{
+  grid-area: details;
+  text-align: center;
+  display: flex;
+  justify-content: left;
+   align-items: center;
+}
+
+.btn_details{
+   color: white;
+   margin-top: 10px;
+   min-width: 80px;
+   max-width: 150px;
+   min-height: 70px;
+}
+
+.btn_details:hover{
+  box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+  background: #0d8d91; 
+  color: white;
+}
+
+/*button options ends*/
+
+/*Inputs Row containing service and pay details*/
+.inputRow select{
+  /*background-color: #a5d1c4;*/
+  height: 30px;
+  padding: 0px 5px;
+  line-height: 2rem;
+
+
+}
+
+
+
+/*Formating the table header only*/
+th{
+  height: 50px;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 2px;
+}
+
+/*Setting the border bottom of the income table*/
+th, td {
+  border: 1px solid #d4d9d8;
+  border-bottom: 1.5px solid #136b58;
+}
+
+#grossIncome{
+  border-collapse: collapse;
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+fieldset{
+  background-color: var(--form-background-color);
+  padding: 5px;
+}
+
+
+
+.dropDown > option{
+/*background: var(--form-background-color);*/
+}
+
+
+.legend_income{
+  background-color: var(--primary-color);
+  color: white;
+  padding: 5px 20px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  border-radius: 5px;
+}
+
+
+.legend_options{
+   background-color: var(--primary-color);
+  color: white;
+  padding: 5px 20px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  border-radius: 5px;
+}
+
+/*Add Personal Details button*/
+#personalDetails{
+  color: white;
+
+}
+
+#personalDetails:hover{
+  box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+  background: #69b398; 
+  color: black;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 50px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+  border-radius: 10px;
+  border-top-width: 10px;
+  border-bottom-width: 10px;
+  border-top-color: var(--primary-color);
+  border-bottom-color: var(--primary-color); 
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn_modal{
+    color: white;
+    margin: 1rem auto;
+    /*max-width: 70px;*/
+}
+
+.btn_modal:hover{
+
+  box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+  background: #69b398; 
+  color: black;
+
+}
+
+.modal1_Row{
+
+  
+  display: flex;
+  /*flex-wrap: wrap;*/
+  flex-direction: column;
+  padding: 5px 20px;
+
+}
+.inputRow_modal1{
+  
+ /* width: 100%;
+  margin: 10px;
+  align-items: left;
+  justify-content: flex-start;*/
+}
+
+.inputRow_modal1 select{
+   height: 30px;
+  padding: 0px 5px;
+  line-height: 1rem;
+}
+
+.inputRow_modal1 label{
+  margin: 10px 5px;
+  /*line-height: 1rem;*/
+}
+
+.input-box-modal1{
+  border: 0;
+  border-bottom: 1px solid;
+  border-color: var(--primary-color);
+  outline: 0;
+  font-size: 1rem;
+  padding: 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+/*the modal dialog box ends*/
+
+/*GPF modal dialog box*/
+
+
+.modal-content-gpf{
+  width: 40%;
+}
+/*This takes the input in monthly and lumpsum form*/
+.gpfModeInput label input{
+  display: inline-flex;
+  
+}
+
+.gpfModeInput{
+  margin:10px;
+}
+
+
+
+/*This makes the selective input disappear */
+#gpf_inputMonthly{
+  margin:10px;
+  display: none;
+}
+#gpf_inputMonths{
+  margin: 10px;
+  display: none;
+}
+
+
+/*This is for Misc. Income Modal Box*/
+
+.miscInput{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.miscRow{
+  line-height: 3rem;
+  border: none;
+  width: 70%;
+  text-align: left;
+}
+
+.miscRow > input{
+  border: none;
+  border-bottom: solid 1px black;
+  line-height: 1.6rem;
+  background:  var(--form-background-color);
+  text-align: center;
+
+}
+
+
+/*To hide the incrementor in number input type*/
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/*Number Increment styling ends*/
+
+
+/*--------------------TAB styling in personal pay and deputation allowance modal box----------*/
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: var(--secondary-color);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: white;
+  float: left;
+  /*border: none;*/
+  border: 1px solid #ccc;
+  /*outline: none;*/
+  cursor: pointer;
+  padding: 10px 16px;
+  transition: 0.3s;
+  font-size: 15px;
+  width: 50%;
+
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: var(--primary-color);
+  color: white;
+   box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #cc0;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+
+#btn_personalPay{
+  /*border-right: 1px solid white;*/
+}
+
+#btn_deputationAllowance{
+
+}
+
+/*-------------------------TAB styling in personal pay and deputation allowance modal box ENDS---------------*/

@@ -58,7 +58,7 @@
 	border: 2px solid;
 	background: var(--form-background-color);
 	color: var(--primary-color);
-	transform: scale(1.01);
+	transform: scale(1.00);
 	transition: transform 0.2s ease-in;
 }
 

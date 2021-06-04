@@ -80,12 +80,14 @@ nav a:hover{
 	/*background-color: var(--primary-color);*/
 	background-color: #28a68f;
 	color: white;
+	overflow-x: scroll;
 }
 
 /*This puts the icon and menu text in flex container*/
 .side-menu-flex{
 	display: flex;
 	align-items: center;
+	padding-left: 5px;
 }
 
 .side-bar i,h4{
@@ -107,15 +109,16 @@ nav a:hover{
 /*This adds indentation to the sub menu items */
 .sub-item1>ul, li a{
 	color: white;
-	padding-left: 3em;
+	padding-left: 2em;
 	font-weight: 300;
-	font-size: 1em;
+	font-size: 0.9em;
 }
 
 
-.side-bar label:hover,a:hover{
+.side-bar label:hover,a:hover,input[type="checkbox"]:hover{
 	
 	font-weight: bold; /*This accentuates the appearance of sub menu items when pointer hover over.*/
+	background-color: #ccc;
 
 }
 

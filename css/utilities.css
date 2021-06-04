@@ -187,6 +187,10 @@ footer{
 .ml-4{
 	margin-left: 20px;
 }
+
+.ml-5{
+	margin-left: 4rem;
+}
 /*padding top and bottom*/
 
 .py-1{
@@ -210,6 +214,10 @@ footer{
 }
 
 /*padding on all sides*/
+
+.p-zero{
+	padding: 0.2rem;
+}
 
 .p-1{
 	padding: 1rem;
@@ -248,5 +256,26 @@ footer{
 }
 
 .pl-5{
+	padding-left: 4rem;
+}
+
+/*padding on right sides*/
+
+.pr-1{
+	margin-left: 0.2rem;
+}
+.pr-2{
+	padding-left: 0.5rem;
+}
+
+.pr-3{
+	padding-left: 1rem;
+}
+
+.pr-4{
+	padding-left: 3rem;
+}
+
+.pr-5{
 	padding-left: 4rem;
 }
