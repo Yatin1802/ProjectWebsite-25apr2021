@@ -80,7 +80,11 @@ nav a:hover{
 	/*background-color: var(--primary-color);*/
 	background-color: #28a68f;
 	color: white;
+
 	overflow-x: scroll;
+
+	overflow-x:scroll;
+
 }
 
 /*This puts the icon and menu text in flex container*/
