@@ -1,0 +1,161 @@
+
+/*The content area should have minimum height else it will look too short without content*/
+.grid_hospSearch{
+	min-height: 450px;
+}
+
+#search_Input{
+	background-image: url('../images/search_icon.png');
+ 	background-repeat: no-repeat;
+
+	  width: 100%;
+	  font-size: 0.9rem;
+	  padding: 12px 20px 12px 40px;
+  
+  
+  border-top:  2px solid var(--primary-color);
+  border-bottom: 3px solid var(--primary-color);
+  border-left: 3px solid var(--primary-color);
+  border-right: 2px solid var(--primary-color);
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 20px;
+  margin-bottom: 12px;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+}
+
+/*When the search bar is clicked the background-color changes*/
+#search_Input:focus{
+	background-color: #e4f2ee;
+	color: var(--side-menu-text-color);
+	outline: none;
+	box-shadow: 5px 5px 4px #888888;
+}
+
+#table_Hospital{
+
+	margin-top: 1rem;
+	width: 90%;
+	border-collapse: collapse;
+	display: none;
+
+}
+
+/*Formating the table header only*/
+th{
+  height: 50px;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 2px;
+}
+
+/*Setting the border bottom of the income table*/
+th, td {
+  border: 1px solid #d4d9d8;
+  border-bottom: 1.5px solid #136b58;
+}
+
+.headingSH{
+	font-size: 1.1rem;
+	font-weight: normal;
+	padding: 10px;
+	background:  var(--primary-color);
+	color: white;
+	text-align: center;
+	border-top-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.contentSH{
+	margin-top: 1rem;
+	padding: 10px;
+	/*border-top: 3px solid var(--primary-color);*/
+	width: 80%;
+	 font-size: 1rem;
+	 /* border-top-right-radius: 10px;
+	  border-top-left-radius: 10px;*/
+}
+
+.searchInputMain{
+	display: flex;
+	
+}
+
+#searchInputArea{
+	flex: 80%;
+}
+
+#searchHospInfo{
+	flex: 20%;
+  margin-left: 20px;
+  margin-top: 20px;
+  padding: 5px 3px;
+  border-left: 5px var(--primary-color) solid;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: #a7cfc5;
+  color: var(--primary-color);
+  font-size: 0.9em;
+  height: 90px;
+  color: green;
+}
+
+#matchCount{
+  margin-top: 25px;
+
+  padding: 0px 5px;
+  border-left: 5px var(--primary-color) solid;
+  border-radius: 5px;
+  background: #a7cfc5;
+  color: var(--primary-color);
+  font-size: 1em;
+  width: 100%;
+
+}
+
+/*The anchor are bold... making them normal*/
+#searchHospInfo,a{
+	font-weight: normal;
+}
+/*Making anchor text bold when hover*/
+#searchHospInfo,a:hover{
+	font-weight: bold;
+}
+#searchHospInfo:hover{
+	box-shadow: 5px 5px 4px #888888;
+}
+
+/*media queries*/
+@media screen and (max-width: 600px) {
+ 
+.searchInputMain{
+
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+
+#searchHospInfo{
+	margin-left: 0;
+	/*This needs checking*/
+	margin-bottom: 50px;
+	padding: 5px 0px;
+	max-height: 50px;
+	padding-left: 3px;
+}
+ 
+ #matchCount{
+
+ }
+
+ #table_Hospital{
+ 	margin-top: 20px;
+ }
+}
+
+
+/*Media Query Ends*/

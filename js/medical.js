@@ -54,12 +54,12 @@ function fillUpOnSelection(){
 			//RATEFOUND = true;
 			//the selectedIndex of 1 = NABH and 2 = Non-NABH, the rates adjusts accordingly
 			if (accreditation.selectedIndex == 1) {
-				expenditure.value = parseInt(testNames[i][2])*qty;
-				admissible.value = parseInt(testNames[i][2])*qty;
+				expenditure.value = Math.round(parseInt(testNames[i][2])*qty);
+				admissible.value = Math.round(parseInt(testNames[i][2])*qty);
 			}
 			if (accreditation.selectedIndex == 2) {
-				expenditure.value = parseInt(testNames[i][1])*qty;
-				admissible.value = parseInt(testNames[i][1])*qty;
+				expenditure.value = Math.round(parseInt(testNames[i][1])*qty);
+				admissible.value = Math.round(parseInt(testNames[i][1])*qty);
 			}
 		}
 	}
@@ -73,15 +73,15 @@ function fillUpOnSelection(){
 		}
 		else{
 			if (restrictEntilement.selectedIndex == 1) {
-				expenditure.value = parseInt(expenditure.value)*1.15;
-				admissible.value = parseInt(admissible.value)*1.15;
+				expenditure.value = Math.round(parseInt(expenditure.value)*1.15);
+				admissible.value = Math.round(parseInt(admissible.value)*1.15);
 			}
 			else{
 
 				if (restrictEntilement.selectedIndex == 3) {
 
-				expenditure.value = parseInt(expenditure.value)*0.9;
-				admissible.value = parseInt(admissible.value)*0.9;
+				expenditure.value = Math.round(parseInt(expenditure.value)*0.9);
+				admissible.value = Math.round(parseInt(admissible.value)*0.9);
 				}
 				else{
 					alert("Select Entitlement of the Beneficiary Please!");
@@ -137,8 +137,8 @@ function highlightRow(e){
 		
 		}
 	}
-	console.log(toggleHighlight);
-	console.log(SELECTED_ROW);
+	console.log("toggleHighlight"+toggleHighlight);
+	console.log("Toggle"+SELECTED_ROW);
 	// console.log(rowClicked.rowIndex);
 	//Select only the table body... i.e. rowindex greater than 0 only
 }
@@ -212,6 +212,7 @@ function addToTable()
 
 	clearInputs();
 
+	
 }
 
 function addOnEnter(e){
@@ -221,6 +222,7 @@ function addOnEnter(e){
     // event.preventDefault();
     // // Trigger the button element with a click
    addToTable();
+
   }
 
 }
@@ -237,6 +239,10 @@ function clearInputs(){
 	document.getElementById("input_admissible").value = "";
 	// document.getElementById("input_admissible").focus();
 	document.getElementById("quantity").value = 1;
+
+	document.getElementById("chkBoxEntitlement").checked = false;
+
+	document.getElementById("remarks").selectedIndex = 1;
 	SELECTED_ROW = -1;
 }
 
@@ -292,33 +298,51 @@ function totalRow(){
 function deleteRow(){
 
 	// alert("Inside Delete Row");
-
+	console.log("selected row "+SELECTED_ROW);
 	var totalRow1 = document.getElementById("id_medical_table").rows.length;
 
-	console.log(document.getElementById("id_medical_table").rows.length);
+	console.log("deleteRow"+document.getElementById("id_medical_table").rows.length);
 	
-	if (totalRow1 > 1) {
+	if (SELECTED_ROW != -1) {
 
-		if (SELECTED_ROW < totalRow1-1) {
-			
-			//deletes the selected row, the above if ensures that total row is not deleted
-			document.getElementById("id_medical_table").deleteRow(SELECTED_ROW);
-			SELECTED_ROW = -1; // this Global flag needs to reset as no row is selected after deletion
-			
-			if (totalRow1>1) 
-			{
-				// alert("");
-				//once deleted, the total needs to be recalculated. Hence the old total is removed
-				document.getElementById("id_medical_table").deleteRow(totalRow1-2);
-				//totalRow is called to recalculate the total amount
-				totalRow();
-				sNoReset();
+		if (totalRow1 > 1) {
+
+			if (SELECTED_ROW < totalRow1-1) {
+				
+				//deletes the selected row, the above if ensures that total row is not deleted
+				document.getElementById("id_medical_table").deleteRow(SELECTED_ROW);
+				SELECTED_ROW = -1; // this Global flag needs to reset as no row is selected after deletion
+				
+				if (totalRow1>1) 
+				{
+					// alert("");
+					//once deleted, the total needs to be recalculated. Hence the old total is removed
+					document.getElementById("id_medical_table").deleteRow(totalRow1-2);
+					//totalRow is called to recalculate the total amount
+					totalRow();
+					sNoReset();
+					SELECTED_ROW = -1;
+				}
 			}
+			else{
+
+				alert("Don't delete the Total Row!")
+				document.getElementById("id_medical_table").rows[totalRow1-1].className = "";
+				SELECTED_ROW = -1;
+			}
+		}	
+
+	else{
+			alert("Don't delete the Table Header!");
+			SELECTED_ROW = -1;
 		}
+
 	}
 	else{
-		alert("Dude.... leave the header alone!");
+
+		alert("Please select a row for deletion!");
 	}
+	
 
 }
 
@@ -346,6 +370,44 @@ function insertRow(){
 		console.log(SELECTED_ROW+"selectedrow" ); console.log(totalRow1-1);
 	}
 	
+}
+
+function reset_Form(){
+
+	
+	var patientName = document.getElementById("input_name");
+	var entitlementType = document.getElementById("entitlement");
+	var hospName = document.getElementById("input_hosp");
+	var hospAccr = document.getElementById("accreditation");
+
+	patientName.value = "";
+	entitlementType.selectedIndex = 2;
+	hospName.value = "";
+	hospAccr.selectedIndex = 1;
+
+
+	clearInputs();
+	deleteTableRows();
+}
+
+function deleteTableRows() {
+
+	var medTable = document.getElementById("id_medical_table");
+
+	var totalRows = parseInt(medTable.rows.length);
+
+	if (totalRows>1)
+	{	
+		console.log("deleteTable "+totalRows);
+		for(var i = totalRows-1; i>=1; i--)
+		{	
+			console.log("deleteTable "+totalRows);
+			medTable.deleteRow(i);
+		}
+		SELECTED_ROW = -1;
+	}	
+		
+
 }
 
 

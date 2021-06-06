@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
 	<script type="text/javascript" src="ITcalc.js"></script>
 	<script type="text/javascript" src="DA.js"></script>
+	<script type="text/javascript" src="../js/main.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale = 1.0">
 
 	
@@ -29,8 +30,8 @@
 			<nav>
 				
 				<ul id="list-nav">
-					<li><a id="home" href="home.html" target="_blank">Home</a></li>
-					<li><a  href="aboutus.html" target="_blank">About Us</a></li>
+					<li><a id="home" href="index.html">Home</a></li>
+					<li><a  href="#" target="_blank">About Us</a></li>
 
 				</ul>
 			</nav>
@@ -48,12 +49,14 @@
 			
 			<div class="side-menu1 side-menu-flex my-1s" >
 				
-				<div class="sb-item1">
+				<div class="sb-item1 sb-item">
+
 					<input type="checkbox" id="A"><i class="fas fa-calculator"></i>
 					<label class="sb-item-text" for="A">Widgets</label>
+					
 					<ul >
-						<li><a href="medical_app.html">Medical Bill App</a></li>
-						<li><a href="#">Income Tax Calculator</a></li>
+						<li><a href="../medical_app.html" target="_blank">Medical Bill App</a></li>
+						<li><a href="IT_calc.html">Income Tax Calculator</a></li>
 						<li><a href="#">LTC fare Calculator</a></li>
 					</ul>
 					<!-- <h4 class="pl-2"></h5> -->
@@ -63,7 +66,7 @@
 
 			<div class="side-menu1 side-menu-flex my-1s" >
 				
-				<div class="sb-item2">
+				<div class="sb-item2 sb-item">
 					<input type="checkbox" id="B"><i class="fas fa-plane-departure"></i>
 					<label class="sb-item-text" for="B">LTC</label>
 					<ul>
@@ -76,15 +79,15 @@
 				
 			</div>
 
-			<div class="side-menu1 side-menu-flex my-1s" >
+			<div class="side-menu1 side-menu-flex  my-1s" >
 				
-				<div class="sb-item3">
+				<div class="sb-item3 sb-item">
 					<input type="checkbox" id="C"><i class="fas fa-hand-holding-medical"></i>
 					<label class="sb-item-text" for="C">CGHS Guidelines</label>
 					<ul>
 						<li><a href="#">Important Rules</a></li>
 						<li><a href="#">CGHS Rate List</a></li>
-						<li><a href="#">Search Hospital</a></li>
+						<li><a href="../CGHS/Search_Hospital.html" target="_blank">Search Hospital</a></li>
 					</ul>
 					<!-- <h4 class="pl-2"></h5> -->
 				</div>
@@ -93,7 +96,7 @@
 
 			<div class="side-menu1 side-menu-flex my-1s" >
 				
-				<div class="sb-item4">
+				<div class="sb-item4 sb-item">
 					<input type="checkbox" id="D"><i class="fas fa-rupee-sign"></i>
 					<label class="sb-item-text" for="D">Pay Fixation</label>
 					<ul>
@@ -109,7 +112,7 @@
 
 			<div class="side-menu1 side-menu-flex my-1s" >
 				
-				<div class="sb-item5">
+				<div class="sb-item5 sb-item">
 					<input type="checkbox" id="E"><i class="fas fa-blind"></i>
 					<label class="sb-item-text" for="E">Pensioner's Guide</label>
 					<ul>
@@ -123,7 +126,7 @@
 			
 			<div class="side-menu1 side-menu-flex my-1s" >
 				
-				<div class="sb-item6">
+				<div class="sb-item6 sb-item">
 					<input type="checkbox" id="F"><i class="fas fa-coins"></i>
 					<label class="sb-item-text" for="F">Allowances</label>
 					<ul>
@@ -140,7 +143,7 @@
 		<!-- SIDE BAR ENDS -->
 
 		<div class="content-area m-1 p-1">
-
+			<i class="fas fa-bars" id="hMenu"></i>
 			<!-- The Modal -->
 <!-- 			<div>
  -->				
@@ -557,7 +560,7 @@
 						<option>2024-25</option>
 
 					</select>
-
+					<div style="display:inline-flex; margin-top: 5px;">
 						<label for="emp_group" class="ml-3">Select Group</label>
 					   	<select id="emp_group" class="dropDown ml-1" >
 					   		<option>Group A</option>
@@ -567,38 +570,53 @@
 					   		<option>Group C</option>
 					   	</select>
 
-				    	<label for="emp_pension" class="ml-3">Pension Type</label>
-				    	<select id="emp_pension" class="drop_down_input ml-1" >
-					   		<option>Old Pension</option>
-					   		<option>NPS</option>
-					   	</select>
+					</div>
+						
+
+					   	<div style="display:inline-flex; margin-top: 5px;">
+						   	<label for="emp_pension" class="ml-3">Pension Type</label>
+					    	<select id="emp_pension" class="drop_down_input ml-1" >
+						   		<option>Old Pension</option>
+						   		<option>NPS</option>
+						   	</select>
+					   	</div>
+				    	
 					</div>
 
 					<div style="margin-top: 10px; margin-bottom: 10px;" class="inputRow">
-											
-						<label for="emp_cghs" class="ml-3">CGHS Deduction</label>
-				    	<select id="emp_cghs" class="drop_down_input ml-1">
-					   		<option>Yes</option>
-					   		<option>No</option>
-					   	</select>
+						
+						<div style="display:inline-flex; margin-top: 5px;">
+							<label for="emp_cghs" class="ml-3">CGHS Deduction</label>
+				    		<select id="emp_cghs" class="drop_down_input ml-1">
+					   			<option>Yes</option>
+					   			<option>No</option>
+					   		</select>
+						</div>					
+						
 
-					   	<label for="emp_transport" class="ml-3">Govt. Transport</label>
-				    	<select id="emp_transport" class="drop_down_input ml-1">
-					   		<option>No</option>
-					   		<option>Yes</option>
-					   	</select>
+					   	<div style="display:inline-flex; margin-top: 5px;">
+						   	<label for="emp_transport" class="ml-3">Govt. Transport</label>
+					    	<select id="emp_transport" class="drop_down_input ml-1">
+						   		<option>No</option>
+						   		<option>Yes</option>
+						   	</select>
+					   	</div>
+					  
 
-					   	<label for="emp_accomodation" class="ml-3">Govt. Accommodation</label>
-				    	<select id="emp_accomodation" class="drop_down_input ml-1">
-					   		<option>No</option>
-					   		<option>Yes</option>
-					   	</select>
+					   	<div style="display:inline-flex; margin-top: 5px;">
+						   	<label for="emp_accomodation" class="ml-3">Govt. Accommodation</label>
+					    	<select id="emp_accomodation" class="drop_down_input ml-1">
+						   		<option>No</option>
+						   		<option>Yes</option>
+						   	</select>
+					   	</div>
+					 
 					   	<div style="display:inline-flex; margin-top: 5px;">
 					   		<label for="emp_handicap" class="ml-3">Physical Handicap</label>
-				    	<select id="emp_handicap" class="drop_down_input ml-1">
-					   		<option>No</option>
-					   		<option>Yes</option>
-					   	</select>
+					    	<select id="emp_handicap" class="drop_down_input ml-1">
+						   		<option>No</option>
+						   		<option>Yes</option>
+						   	</select>
 					   	</div>
 					   	
 					</div>
@@ -707,12 +725,123 @@
 		</div>
 
 	</footer>
+<!-- The HamBurger Menu Modal -->
+	<div>
+				
+		<div id="myModal_hMenu" class="modal" id="modal_hMenu">
 
+				  <!-- Modal content -->
+		  <div class="modal-content" id="hMenu_Modal">
+		   
+					
+					<div class="side-barHM">
+			 		<span id="close_hMenu">&times;</span>
+					<div class="side-menu1HM side-menu-flexHM my-1s" >
+						
+						<div class="sb-item1HM sb-itemHM">
+
+							<input type="checkbox" id="AHM"><i class="fas fa-calculator"></i>
+							<label class="sb-item-textHM" for="AHM">Widgets</label>
+							
+							<ul>
+								<li><a href="medical_app.html">Medical Bill App</a></li>
+								<li><a href="IT_calc.html" onclick="javascript:window.location.reload();">Income Tax Calculator</a></li>
+								<li><a href="#">LTC fare Calculator</a></li>
+							</ul>
+							<!-- <h4 class="pl-2"></h5> -->
+						</div>
+				
+					</div>
+
+					<div class="side-menu1HM side-menu-flexHM my-1s" >
+				
+						<div class="sb-item2 sb-itemHM">
+							<input type="checkbox" id="BHM"><i class="fas fa-plane-departure"></i>
+							<label class="sb-item-textHM" for="BHM">LTC</label>
+							<ul>
+								<li><a href="#">Important Rules</a></li>
+								<li><a href="#">LTC Fare Table</a></li>
+								<li><a href="#">Other Information</a></li>
+							</ul>
+							<!-- <h4 class="pl-2"></h5> -->
+						</div>
+				
+					</div>
+
+					<div class="side-menu1HM side-menu-flexHM  my-1s" >
+				
+						<div class="sb-item3 sb-itemHM">
+							<input type="checkbox" id="CHM"><i class="fas fa-hand-holding-medical"></i>
+							<label class="sb-item-textHM" for="CHM">CGHS Guidelines</label>
+							<ul>
+								<li><a href="#">Important Rules</a></li>
+								<li><a href="#">CGHS Rate List</a></li>
+								<li><a href="../CGHS/Search_Hospital.html">Search Hospital</a></li>
+							</ul>
+							<!-- <h4 class="pl-2"></h5> -->
+						</div>
+				
+					</div>
+
+					<div class="side-menu1HM side-menu-flexHM my-1s" >
+				
+						<div class="sb-item4 sb-itemHM">
+							<input type="checkbox" id="DHM"><i class="fas fa-rupee-sign"></i>
+							<label class="sb-item-textHM" for="DHM">Pay Fixation</label>
+							<ul>
+								<li><a href="#">Important Rules</a></li>
+								<li><a href="#">MACP Guide</a></li>
+								<li><a href="#">Pay Matrix</a></li>
+								<li><a href="#">Other Info</a></li>
+							</ul>
+							<!-- <h4 class="pl-2"></h5> -->
+						</div>
+				
+					</div>
+
+					<div class="side-menu1HM side-menu-flexHM my-1s" >
+				
+						<div class="sb-item5 sb-itemHM">
+							<input type="checkbox" id="EHM"><i class="fas fa-blind"></i>
+							<label class="sb-item-textHM" for="EHM">Pensioner's Guide</label>
+							<ul>
+								<li><a href="#">Bhavishya Portal</a></li>
+								<li><a href="#">Other Info</a></li>
+							</ul>
+							<!-- <h4 class="pl-2"></h5> -->
+						</div>
+				
+					</div>
+			
+					<div class="side-menu1HM side-menu-flexHM my-1s" >
+				
+						<div class="sb-item6 sb-itemHM">
+							<input type="checkbox" id="FHM"><i class="fas fa-coins"></i>
+							<label class="sb-item-textHM" for="FHM">Allowances</label>
+							<ul>
+								<li><a href="#">TA Rules</a></li>
+								<li><a href="#">Other Info</a></li>
+							</ul>
+							<!-- <h4 class="pl-2"></h5> -->
+						</div>
+				
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+	</div> 
+	<!-- The Hamburger Menu Modal Dialog box ends -->
 	<script type="text/javascript">
 
 			//updates the Gross Table
 			// document.getElementById("updateTable").addEventListener("click", updateTable);
 
+			// The Hamburger Menu
+			document.getElementById("hMenu").addEventListener("click",show_hMenu_Modal);
+			
 			//also updates the Gross Table when the FY is changed
 			document.getElementById("financialYear").addEventListener("input",updateTable);
 
