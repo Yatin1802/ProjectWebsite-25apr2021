@@ -102,7 +102,7 @@ th, td {
   color: var(--primary-color);
   font-size: 0.9em;
   height: auto;
-  color: green;
+  
 }
 
 #matchCount{
@@ -136,7 +136,7 @@ th, td {
 	/*This needs checking*/
 	margin-bottom: 50px;
 	padding: 5px 0px;
-	max-height: 50px;
+	height: auto;
 	padding-left: 3px;
 }
  
