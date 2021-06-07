@@ -259,7 +259,9 @@ input:checked ~ ul{
 @media screen and (max-width: 600px) {
  
 .container{
-	width: auto;
+	
+	width: 100%; 
+	
 	margin: 0 auto;/* margin auto centrally aligns the container*/
 	/*padding-right: 0 40px;*/
 }
@@ -341,7 +343,7 @@ input:checked ~ ul{
 	  margin: none;
 	  background-color: var(--primary-color);
 	  border: 1px solid #888;
-	  width: auto;
+	  width: 80%;
 	  height: 100%;
 	  border-radius: 0px;
 	  border-top-width: 0px;
