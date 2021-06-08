@@ -258,16 +258,8 @@ input:checked ~ ul{
 /*media queries*/
 @media screen and (max-width: 600px) {
  
-body{
-	width:100%;
-	}
-.container{
-	
-	width: 100%; 
-	
-	margin: 0 auto;/* margin auto centrally aligns the container*/
-	/*padding-right: 0 40px;*/
-}
+
+
   .grid-container{
 
 	display: grid;
@@ -280,7 +272,7 @@ body{
 
 	display: grid;
 	grid-template-columns: auto auto;
-	width:auto;
+	max-width: 400px;
 	grid-gap: 10px;
 	margin: 0 auto;
 	}
@@ -294,7 +286,17 @@ body{
 	}	
 }
 
-
+/*FOOTER LAYOUT*/
+.footer{
+	height: 100px;
+}
+.footer-info ul{
+	display: flex;
+	justify-content: space-between;
+	color:white;
+	width: auto;  /**/
+	margin: 0 auto;
+}
 /*Media Query Ends*/
 
 /* The Modal (background) */
@@ -344,6 +346,7 @@ body{
 #hMenu_Modal{
 	  padding: none;
 	  margin: none;
+	  margin-right: 100px;
 	  background-color: var(--primary-color);
 	  border: 1px solid #888;
 	  width: 80%;
@@ -363,11 +366,11 @@ body{
 }
 
 #close_hMenu{
-	  color: white;
+	color: white;
   float: right;
   font-size: 35px;
   font-weight: bold;
-  margin: 5px;
+  /*margin: 5px;*/
 }
 
 #close_hMenu:hover,
@@ -391,7 +394,7 @@ body{
 /*This puts the icon and menu text in flex container*/
 .side-menu-flexHM{
 	display: flex;
-	align-items: left;
+	align-items: center;
 	padding-left: 5px;
 }
 
