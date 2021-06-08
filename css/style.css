@@ -1,4 +1,4 @@
-/*@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
 /*navbar is the background of the navigation*/
 .navbar{
@@ -244,6 +244,7 @@ input:checked ~ ul{
 .footer{
 	height: 100px;
 }
+
 .footer-info ul{
 	display: flex;
 	justify-content: space-between;
@@ -252,12 +253,17 @@ input:checked ~ ul{
 	margin: 0 auto;
 }
 
+.footer-info{
+      max-width: 500px;
+}
+
 /*styling hamburger menu*/
 
 
 /*media queries*/
 @media screen and (max-width: 600px) {
  
+
 
   .grid-container{
 
@@ -285,7 +291,17 @@ input:checked ~ ul{
 	}	
 }
 
-
+/*FOOTER LAYOUT*/
+.footer{
+	height: 100px;
+}
+.footer-info ul{
+	display: flex;
+	justify-content: space-between;
+	color:white;
+	width: auto;  /**/
+	margin: 0 auto;
+}
 /*Media Query Ends*/
 
 /* The Modal (background) */
@@ -335,9 +351,10 @@ input:checked ~ ul{
 #hMenu_Modal{
 	  padding: none;
 	  margin: none;
+	  margin-right: 100px;
 	  background-color: var(--primary-color);
 	  border: 1px solid #888;
-	  width: 100%;
+	  width: 80%;
 	  height: 100%;
 	  border-radius: 0px;
 	  border-top-width: 0px;
@@ -354,11 +371,11 @@ input:checked ~ ul{
 }
 
 #close_hMenu{
-	  color: white;
+	color: white;
   float: right;
-  font-size: 28px;
+  font-size: 35px;
   font-weight: bold;
-  margin: 5px;
+  /*margin: 5px;*/
 }
 
 #close_hMenu:hover,
