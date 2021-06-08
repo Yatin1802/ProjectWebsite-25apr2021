@@ -102,6 +102,7 @@ th, td {
   color: var(--primary-color);
   font-size: 0.9em;
   height: auto;
+
   color: green;
 }
 
@@ -116,6 +117,12 @@ th, td {
   font-size: 1em;
   width: 100%;*/
   /*margin: 5px;*/
+
+  
+}
+
+#matchCount{
+
 
 }
 
@@ -146,7 +153,11 @@ th, td {
 	/*This needs checking*/
 	margin-bottom: 50px;
 	padding: 5px 0px;
+
 	/*max-height: 60px;*/
+
+	height: auto;
+
 	padding-left: 3px;
 }
  
@@ -156,8 +167,12 @@ th, td {
 
  #table_Hospital{
  	margin-top: 20px;
+
  	width: 100%;
  	font-size: 0.8rem;
+
+	 font-size:0.8em;
+
  }
 }
 
