@@ -323,13 +323,15 @@ function clearFareTable(){
 
 function showToCityDrop_dbl(){
 
+	console.log(CITY_DROPDOWN_READY);
 	var fromInput = document.getElementById("ltc_80_from_input");
 	if (fromInput.textLength > 0 && CITY_DROPDOWN_READY==1) {
 		document.getElementById("city_to_ltc").style.display = "block";
 	}
 	else
 	{
-		alert("Please set the Destination First!");
+		document.getElementById("city_to_ltc").style.display = "none";
+		//alert("Please set the Destination First!");
 	}
 	
 }
