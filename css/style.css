@@ -126,7 +126,7 @@ input:checked ~ ul{
 .sub-item1>ul, li a{
 	color: var(--side-menu-text-color);
 	
-	font-weight: 300;
+	/*font-weight: bold;*/
 	font-size: 0.9em;
 	text-align: center;
 	padding-left: 1rem;
@@ -138,7 +138,6 @@ input:checked ~ ul{
 	
 	font-size: 1.1em; /*This accentuates the appearance of sub menu items when pointer hover over.*/
 	transition: font-size 0.3s ease-in;
-
 }
 
 .sb-item >ul>li:hover{
@@ -152,12 +151,12 @@ input:checked ~ ul{
 	
 	background: var(--primary-color);
 	border: none;
-	margin: 2px 0px;
+	margin: 8px 0px;
 	color: #fff;
 	border-radius: 10px;
 	font-size: 0.9rem;
-	padding-top: 5px;
-	padding-bottom: 5px;
+	padding-top: 6px;
+	padding-bottom: 6px;
 	/*transition: font-size 0.3s ease-in;*/
 	
 
@@ -168,7 +167,6 @@ input:checked ~ ul{
 .sb-item-text{
 	font-size: 1rem;
 	padding-left: 5px;
-	
 
 }
 .side-bar{
@@ -404,7 +402,7 @@ input:checked ~ ul{
 }
 
 .side-barHM i,h4{
-	font-size: 1rem;
+	font-size: 1.1rem;
 	align-items: center;
 	/*font-weight: 400;*/
 }
@@ -423,7 +421,7 @@ input:checked ~ ul{
 /*This adds indentation to the sub menu items */
 .sub-item1HM>ul, li a{
 	font-weight: 300;
-	font-size: 0.9em;
+	font-size: 1rem;
 	text-align: center;
 	padding-left: 1rem;
 	padding-right: 1rem;
@@ -454,7 +452,7 @@ input:checked ~ ul{
 	margin: 2px 0px;
 	color: #fff;
 	border-radius: 10px;
-	font-size: 0.9rem;
+	font-size: 1rem;
 	padding-top: 5px;
 	padding-bottom: 5px;
 	border: 1px solid white;
@@ -466,7 +464,7 @@ input:checked ~ ul{
 
 
 .sb-item-textHM{
-	font-size: 1rem;
+	font-size: 1.1rem;
 	padding-left: 5px;
 	
 

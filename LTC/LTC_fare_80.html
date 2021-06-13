@@ -6,11 +6,12 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<link rel="stylesheet" type="text/css" href="../css/utilities.css">
-	<link rel="stylesheet" type="text/css" href="../css/Hosp_Search.css">
+	<!-- <link rel="stylesheet" type="text/css" href="../css/Hosp_Search.css"> -->
+	<link rel="stylesheet" type="text/css" href="../css/LTC_80.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
 	<script type="text/javascript" src="../js/main.js"></script>
-	<script type="text/javascript" src="../js/HospitalListGlobal.js"></script>
-	<script type="text/javascript" src="../js/Hospital_Search.js"></script>
+	<script type="text/javascript" src="../js/LTC_80_Table.js"></script>
+	<script type="text/javascript" src="../js/LTC_80.js"></script>
 
 	<!-- <script type="text/javascript" src="main.js"></script> -->
 
@@ -84,8 +85,8 @@
 					<label class="sb-item-text" for="C">CGHS Guidelines</label>
 					<ul>
 						<li><a href="#">Important Rules</a></li>
-						<li><a href="CGHS/Search_CGHS_Rate.html" target="_blank">CGHS Rate List</a></li>
-						<li><a href="CGHS/Search_Hospital.html" target="_blank">Search Hospital</a></li>
+						<li><a href="../CGHS/Search_CGHS_Rate.html">CGHS Rate List</a></li>
+						<li><a href="../CGHS/Search_Hospital.html" target="_blank">Search Hospital</a></li>
 					</ul>
 					<!-- <h4 class="pl-2"></h5> -->
 				</div>
@@ -140,40 +141,72 @@
 
 		<!-- SIDE BAR ENDS -->
 
-		<div class="content-area m-1 p-1">
+		<div class="content-area m-1 p-1" style="min-height: 400px;">
 
 			<i class="fas fa-bars" id="hMenu"></i>	
 			
-			<div class="searchInputMain">
-				
-				<div id="searchInputArea">
-					<h4 class="headingSH">List of CGHS empanelled Hospital/ Diagnostic Centre in Delhi-NCR (as on May, 2021)</h4>
-					<p class="contentSH">Enter the Hospital or Location Name in the Search Bar below</p>
-					<input type="text" id="search_Input" placeholder="Search for CGHS empanelled Hospital .." title="Type in a name">
-				</div>
-
-				<div id="searchHospInfo">
-					<a href="https://cghs.gov.in/showfile.php?lid=5766" target="_blank">Click Here to see the complete list of Empanelled Hospital <p id="matchCount"></p></a>
-					<!-- This para displays the total search match counts -->
+			<h4 id="ltc_80_heading">LTC 80 Fare Finder</h4>
+			
+			<p id="ltc_80_description">Search for the LTC 80 rates in a simpler way by selecting the Starting and Destination Cities below...</p>
+			
+			<div id="ltc_80_input" class="dropDown_ltc_from">
+				<label for="ltc_80_from_input" class="label_LTC_80">LTC From</label>
+				<div id="ltc_80_from" class="dropDown_ltc_from_input">
 					
+					<input type="text" placeholder="Journey From..." id="ltc_80_from_input">
+				    <div id="city_from_ltc">
+				    	
+					    
+				    </div>
+				   
+				</div>
+				<label for="ltc_80_to_input" class="label_LTC_80" id="lbl_ToCity">LTC To</label>
+				<div id="ltc_80_to" class="dropDown_ltc_from_input">
+					
+					<input type="text" placeholder="Journey To..." id="ltc_80_to_input">
+				    <div id="city_to_ltc">
+				    	
+					    
+				    </div>
+
 				</div>
 
 			</div>
+			<table id="table_LTC_80">
 
-			<table id="table_Hospital">
+					<thead>
+						
+						<th id="LTC_From">LTC From</th>
+						<th id="LTC_To">LTC To</th>
+						<th id="rate_Economy">HLTC (Economy Class)</th>
+						<th id="rate_Business">DLTC (Business Class)</th>
+					</thead>
+
+			</table>
+
+			<!-- This will be a toggle button to show or hide the full LTC 80 table -->
+			<div class = "div_btn">
+				<button id="showLTC_80_Fare_List" type="button" class="btn btn-showFareTable" > Click to Show the LTC 80 Fare Table</button>
+			</div>
+			
+
+			<table id="table_LTC_80_Full">
+				<caption id="fullTableCaption">LTC 80 Fare Table Complete</caption>
+
 				<thead>
-					<th>Name of the Hospital/ Diagnostic Centre</th>
-					<th>Address</th>
-					<th>Accreditation</th>
-					<th>Empanelled for</th>
+					<th id="sno_City_Full">Sr. No.</th>
+					<th id="LTC_From_Full">LTC From</th>
+					<th id="LTC_To_Full">LTC To</th>
+					<th id="rate_Economy_Full">HLTC (Economy Class)</th>
+					<th id="rate_Business_Full">DLTC (Business Class)</th>
 				</thead>
 
 			</table>
-			
-
+		
 		</div>
 
-	</div> 
+
+	</div>	 
 	<!-- Grid Ends -->
 
 	<!-- footer -->
@@ -231,7 +264,7 @@
 							<label class="sb-item-textHM" for="BHM">LTC</label>
 							<ul>
 								<li><a href="#">Important Rules</a></li>
-								<li><a href="../LTC/LTC_fare_80.html">LTC 80 Fare</a></li>
+								<li><a href="#">LTC Fare Table</a></li>
 								<li><a href="#">Other Information</a></li>
 							</ul>
 							<!-- <h4 class="pl-2"></h5> -->
@@ -246,8 +279,8 @@
 							<label class="sb-item-textHM" for="CHM">CGHS Guidelines</label>
 							<ul>
 								<li><a href="#">Important Rules</a></li>
-								<li><a href="CGHS/Search_CGHS_Rate.html">CGHS Rate List</a></li>
-								<li><a href="" onclick="javascript:window.location.reload();">Search Hospital</a></li>
+								<li><a href="../CGHS/Search_CGHS_Rate.html">CGHS Rate List</a></li>
+								<li><a href="../CGHS/Search_Hospital.html">Search Hospital</a></li>
 							</ul>
 							<!-- <h4 class="pl-2"></h5> -->
 						</div>
@@ -310,7 +343,20 @@
 	
 	document.getElementById("hMenu").addEventListener("click",show_hMenu_Modal);
 
-	document.getElementById("search_Input").addEventListener("input",updateHospTable);
+	document.getElementById("ltc_80_from_input").addEventListener("input",filterFunction);
+	document.getElementById("ltc_80_to_input").addEventListener("input",filterFunction_toCity);
+	// to open drop down when focus is on From City Input Box
+	document.getElementById("ltc_80_from_input").addEventListener("focus",showFromCityDrop_dbl);
+	// document.getElementById("ltc_80_from_input").addEventListener("blur",hide_city_list);
+	document.getElementById("ltc_80_from_input").addEventListener("dblclick",showFromCityDrop_dbl);
+
+	document.getElementById("city_from_ltc").addEventListener("click",fill_From_Search);
+	document.getElementById("city_to_ltc").addEventListener("click",fill_To_Search);
+	document.getElementById("ltc_80_to_input").addEventListener("dblclick",showToCityDrop_dbl);
+	document.getElementById("ltc_80_to_input").addEventListener("focus",showToCityDrop_dbl);
+
+//This button event toggles the view of the full LTC 80 Fare table
+	document.getElementById("showLTC_80_Fare_List").addEventListener("click",show_hide_Fare);
 </script>
 
  </body>
