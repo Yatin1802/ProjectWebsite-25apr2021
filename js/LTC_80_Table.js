@@ -128,7 +128,7 @@ var LTC_80_Fare_Table = [
 ["Bhopal","Delhi","5700","20120"],
 ["Bhopal","Mumbai","5700","20120"],
 ["Bhubaneswar","Delhi","7700","30600"],
-["Bhubneswar","Mumbai","7700","36200"],
+["Bhubaneswar","Mumbai","7700","36200"],
 ["Coimbatore","Kochi","4500","17880"],
 ["Coimbatore","Thiruvanantapuram","4500","18680"],
 ["Chandigarh","Delhi","4500","22400"],

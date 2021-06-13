@@ -110,7 +110,7 @@ function fill_From_Search(e){
 	var toCity = document.getElementById("ltc_80_to_input");
 
 	 fromCity.value = e.target.textContent;
-	 toCity.value="";
+	 //toCity.value="";
 
 	 hide_city_list();
 	 clear_City_To_List();
@@ -124,9 +124,9 @@ function fill_From_Search(e){
 
 	 }
 
-	 // if (CITY_DROPDOWN_READY == 1) {
-	 // 		document.getElementById("city_to_ltc").style.display = "block";
-	 // }
+	 if (CITY_DROPDOWN_READY == 1) {
+	 		document.getElementById("city_to_ltc").style.display = "block";
+	 }
 }
 
 //This function is called when the TO CITY list is updated
@@ -225,6 +225,7 @@ function removeDuplicates_Arr(cityToArr){
 	}
 
 	else{
+		return 0;
 		//alert("Something went wrong with loading Destination City Drop Down");
 	}
 
@@ -267,12 +268,12 @@ function filterFunction_toCity() {
 		  // 	show_city_list();
 		  // }
 	}
-	else{
-		//Since the destination is not set, inform the user about it
-		alert("Please set the Destination first from the Drop Down");
-		//The alphabet entered in the To City drop down needs to be set to null string
-		document.getElementById("ltc_80_to_input").value = "";
-	}
+	// else{
+	// 	//Since the destination is not set, inform the user about it
+	// 	alert("Please set the Destination first from the Drop Down");
+	// 	//The alphabet entered in the To City drop down needs to be set to null string
+	// 	document.getElementById("ltc_80_to_input").value = "";
+	// }
 }
 
 function fill_To_Search(e){
