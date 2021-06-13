@@ -78,12 +78,12 @@ function filterFunction() {
   		document.getElementById("city_to_ltc").style.display = "none";
   	}
 
-  	document.getElementById("ltc_80_to_input").value = ""; //removing the text from To City search input
+  	
   }
   else{
   	show_city_list();
   }
-
+  document.getElementById("ltc_80_to_input").value = ""; //removing the text from To City search input
 }
 
 function show_city_list() {
@@ -127,6 +127,7 @@ function fill_From_Search(e){
 	 if (CITY_DROPDOWN_READY == 1) {
 	 		document.getElementById("city_to_ltc").style.display = "block";
 	 }
+	 document.getElementById("ltc_80_to_input").value = "";
 }
 
 //This function is called when the TO CITY list is updated
