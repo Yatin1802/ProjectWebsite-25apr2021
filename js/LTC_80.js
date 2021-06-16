@@ -106,6 +106,10 @@ function fill_From_Search(e){
 
 	 console.log(e.target.textContent);
 
+	 if (e.target.textContent.length >20) {
+	 	return;
+	 }
+
 	 var fromCity = document.getElementById("ltc_80_from_input");
 	var toCity = document.getElementById("ltc_80_to_input");
 
@@ -171,7 +175,7 @@ function Load_City_To_List(){
 		cityName.appendChild(document.createTextNode(cityToArr_Unique[i]));
 
 		cityDropDown.appendChild(cityName);
-		console.log(cityName);
+		//console.log(cityName);
 	}
 
 	//cityDropDown.style.display = "none";
@@ -191,6 +195,7 @@ function clear_City_To_List(){
 
 //This removes the duplicates in the Array loaded from Global LTC table
 function removeDuplicates_Arr(cityToArr){
+
 
 	var cityToArr_Unique = [];
 
@@ -281,6 +286,11 @@ function fill_To_Search(e){
 
 	 console.log(e.target.textContent);
 
+
+	 if (e.target.textContent.length >20) {
+	 	return;
+	 }
+
 	 var toCity = document.getElementById("ltc_80_to_input");
 
 	 toCity.value = e.target.textContent;
@@ -353,6 +363,9 @@ function fetchFareToTable() {
 	var fareEconomy = 0;
 	var fareBusiness = 0;
 
+	var fareEconomy2 = 0;
+	var fareBusiness2 = 0;
+
 	var fareTable = document.getElementById("table_LTC_80");
 
 	var maxIteration = LTC_80_Fare_Table.length; // total no. of rows in ltc 80 table fare
@@ -366,6 +379,9 @@ function fetchFareToTable() {
 
 					fareEconomy = LTC_80_Fare_Table[i][2];
 					fareBusiness = LTC_80_Fare_Table[i][3];
+
+					fareEconomy2 = LTC_80_Fare_Table[i][4];
+					fareBusiness2 = LTC_80_Fare_Table[i][5];
 				}
 		}
 	}
@@ -376,11 +392,18 @@ function fetchFareToTable() {
 		var cell1 = newRow.insertCell(1);
 		var cell2 = newRow.insertCell(2);
 		var cell3 = newRow.insertCell(3);
+
+		var cell4 = newRow.insertCell(4);
+		var cell5 = newRow.insertCell(5);
 		
 		cell0.innerHTML = fromCity;
 		cell1.innerHTML = toCity;
 		cell2.innerHTML = fareEconomy;
 		cell3.innerHTML = fareBusiness;
+
+		//the two columns are additionally added depending on the LTC fare table issued by Air India
+		cell4.innerHTML = fareEconomy2;
+		cell5.innerHTML = fareBusiness2;
 
 }
 
@@ -402,12 +425,18 @@ function load_Full_LTC_Fare_Table() {
 		var cell3 = newRow.insertCell(3);
 		var cell4 = newRow.insertCell(4);
 
+		var cell5 = newRow.insertCell(5);
+		var cell6 = newRow.insertCell(6);
+
 		
 		cell0.innerHTML = i;
 		cell1.innerHTML = LTC_80_Fare_Table[i-1][0];
 		cell2.innerHTML = LTC_80_Fare_Table[i-1][1];
 		cell3.innerHTML = LTC_80_Fare_Table[i-1][2];
 		cell4.innerHTML = LTC_80_Fare_Table[i-1][3];
+
+		cell5.innerHTML = LTC_80_Fare_Table[i-1][4];
+		cell6.innerHTML = LTC_80_Fare_Table[i-1][5];
 
  	}
  	fullTable.style.display="none";
