@@ -185,6 +185,7 @@ input::placeholder {
 #table_LTC_80, #table_LTC_80_Full{
 	overflow: scroll;
 	width: 100%;
+
 }
 #table_LTC_80_Full{
 		font-size: 0.9rem;
@@ -193,9 +194,8 @@ input::placeholder {
 
 	#table_LTC_80{
 		font-size: 0.9rem;
-		max-width: 400px;
-		min-width: 400px;
 		overflow: scroll;
+		display: block;
 
 	}
 
