@@ -191,6 +191,14 @@ input::placeholder {
 		max-height: 400px;
 	}
 
+	#table_LTC_80{
+		font-size: 0.9rem;
+		max-width: 400px;
+		min-width: 400px;
+		overflow: scroll;
+
+	}
+
 	#ltc_80_from_input, #ltc_80_to_input{
 
 		width: 100%;
