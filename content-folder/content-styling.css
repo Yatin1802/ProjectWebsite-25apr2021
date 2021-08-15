@@ -11,6 +11,12 @@
   font-size: 15px;
   transition: 0.3s;
   border-radius: 5px;
+  user-select: auto;
+}
+
+.accordion_indented{
+  width: 90%;
+  scroll-behavior: auto;
 }
 
 .active, .accordion:hover {
@@ -36,4 +42,55 @@
 
 .active:after {
   content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+.margin_for_list>li{
+  padding-left: 2rem;
+}
+
+.content_table,th,td{
+  border: solid 1px;
+  border-collapse: collapse;
+}
+
+.content_table{
+  width: 90%;
+}
+
+.panel_indented{
+
+  width: 90%;
+  overflow: visible;
+}
+
+.bold_sub_heading{
+  font-size: 1em;
+  font-weight: bold;
+}
+
+th{
+  background-color: var(--primary-color);
+  color: white;
+}
+
+td{
+  padding: 2px;
+}
+
+p,li{
+  font-weight: normal;
+  user-select: auto;
+  /*overflow: auto;*/
+  text-align: justify;
+}
+ul{
+
+  font-weight: normal;
+  user-select: auto;
+
+}
+
+p,h2,ul,li{
+  cursor: auto;
+
 }

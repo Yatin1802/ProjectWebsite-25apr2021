@@ -6,7 +6,7 @@ var SELECTED_ROW = -1;
 //This loads the data list when the web page loads
 function loadDataList(){
 
-	console.log(testNames[5][1]);// console.log(testNames[1][1]);
+	console.log(testNames[1813][0]);// console.log(testNames[1][1]);
 
 	var dataList = document.getElementById("test-name");
 
@@ -15,7 +15,7 @@ function loadDataList(){
 		var option = document.createElement("option");
 
 		item.forEach(function(item,index){
-
+			//console.log(item);
 			if (index == 0) {
 
 				option.value = item;
