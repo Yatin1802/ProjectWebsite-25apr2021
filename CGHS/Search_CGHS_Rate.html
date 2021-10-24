@@ -4,10 +4,14 @@
 	<title>Site Name | Portal</title>
 	<meta name="viewport" content="width=device-width, initial-scale = 1.0">
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/utilities.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/utilities.css">
+	<link rel="stylesheet" type="text/css" href="../css/Hosp_Search.css">
+	<link rel="stylesheet" type="text/css" href="../css/CGHS_Rate.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
-	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="../js/main.js"></script>
+	<script type="text/javascript" src="../js/Rate_List_Global.js"></script>
+	<script type="text/javascript" src="../js/CGHS_Rate_Search.js"></script>
 
 	<!-- <script type="text/javascript" src="main.js"></script> -->
 
@@ -25,7 +29,7 @@
 			<nav>
 				
 				<ul id="list-nav">
-					<li><a id="home" href="index.html" target="_blank">Home</a></li>
+					<li><a id="home" href="../index.html" target="_blank">Home</a></li>
 					<li><a  href="aboutus.html" target="_blank">About Us</a></li>
 
 				</ul>
@@ -36,7 +40,7 @@
 
 	<!-- GRID -->
 
-	<div class="grid-container">
+	<div class="grid-container grid_hospSearch">
 		
 		<!-- SIDE BAR STARTS -->
 		
@@ -50,9 +54,9 @@
 					<label class="sb-item-text" for="A">Widgets</label>
 					
 					<ul >
-						<li><a href="medical_app.html" target="_blank">Medical Bill App</a></li>
-						<li><a href="IT_Calc/IT_calc.html" target="_blank">Income Tax Calculator</a></li>
-						<li><a href="Widgets/Leave Encashment.html" target="_blank">Leave Encashment</a></li>
+						<li><a href="../medical_app.html" target="_blank">Medical Bill App</a></li>
+						<li><a href="../IT_Calc/IT_calc.html" target="_blank">Income Tax Calculator</a></li>
+						<li><a href="../Widgets/Leave Encashment.html" target="_blank">Leave Encashment</a></li>
 						<li><a href="#">LTC fare Calculator</a></li>
 					</ul>
 					<!-- <h4 class="pl-2"></h5> -->
@@ -67,7 +71,7 @@
 					<label class="sb-item-text" for="B">LTC</label>
 					<ul>
 						<li><a href="#">Important Rules</a></li>
-						<li><a href="LTC/LTC_fare_80.html">LTC 80 Fare</a></li>
+						<li><a href="../LTC/LTC_fare_80.html">LTC 80 Fare</a></li>
 						<li><a href="#">Other Information</a></li>
 					</ul>
 					<!-- <h4 class="pl-2"></h5> -->
@@ -81,9 +85,9 @@
 					<input type="checkbox" id="C"><i class="fas fa-hand-holding-medical"></i>
 					<label class="sb-item-text" for="C">CGHS Guidelines</label>
 					<ul>
-						<li><a href="content-folder/cghs-important-rules.html">Important Rules</a></li>
-						<li><a href="CGHS/Search_CGHS_Rate.html">CGHS Rate List</a></li>
-						<li><a href="CGHS/Search_Hospital.html" target="_blank">Search Hospital</a></li>
+						<li><a href="#">Important Rules</a></li>
+						<li><a href="Search_CGHS_Rate.html">CGHS Rate List</a></li>
+						<li><a href="Search_Hospital.html" target="_blank">Search Hospital</a></li>
 					</ul>
 					<!-- <h4 class="pl-2"></h5> -->
 				</div>
@@ -138,7 +142,7 @@
 				
 				<div class="sb-item6 sb-item">
 					<input type="checkbox" id="G"><i class="fas fa-ban"></i>
-					<label class="sb-item-text" for="G"><a href="content-folder/POSH.html" target="_blank" style="font-weight: normal; color:var(--side-menu-text-color);">Prevention of Sexual Harassment</a></label>
+					<label class="sb-item-text" for="G"><a href="../content-folder/POSH.html" target="_blank" style="font-weight: normal; color:var(--side-menu-text-color);">Prevention of Sexual Harassment</a></label>
 					
 					<!-- <h4 class="pl-2"></h5> -->
 				</div>
@@ -151,68 +155,35 @@
 
 		<div class="content-area m-1 p-1">
 
-			<i class="fas fa-bars" id="hMenu"></i>
-
-			<div class="welcome">
-				<h2>Welcome,</h2>
-				<p>This is a welcome message but I don't know what to write here so far. The text here will be a brief description of this website which still needs a lot of work. I am still typing because I need some meaningless text to visualize the look and feel of the website. </p>
-
-			</div>
-
-			<div class="direct-links text-center">
+			<i class="fas fa-bars" id="hMenu"></i>	
+			
+			<div class="searchInputMain">
 				
-				<h3>Direct Links</h3>
-
-				<div class="card-container">
-					
-					<div class=" card card-tile text-center" onclick="window.open('medical_app.html', '_blank');" style="cursor: pointer;">
-						<img class="img-common img-med" src="images/medical.png">
-						<a href="medical_app.html" target="_blank" style="font-size: 0.9em;">Medical Bill App</a> 
-						
-						
-					</div>
-
-					<div class=" card card-tile text-center" onclick="window.open('LTC/LTC_fare_80.html', '_blank');" style="cursor: pointer;">
-						<img class="img-common" src="images/ltcfare.png">
-						<a href="LTC/LTC_fare_80.html" target="_blank" style="display: block; font-size: 0.9em;">LTC 80 Fare</a>
-					</div>
-
-					<div class=" card card-tile text-center">
-						<img class="img-common" src="images/paymatrix.png">
-
-						<h4>Pay Matrix</h4>
-					</div>
-
-					<div class=" card card-tile text-center" onclick="window.open('IT_Calc/IT_calc.html', '_blank');" style="cursor: pointer;">
-						<img class="img-common" src="images/tax.png">
-						<a href="IT_Calc/IT_calc.html" target="_blank" style="font-size: 0.9em;">Income Tax Calc</a> 
-					</div>
-
-					<div class=" card card-tile text-center" onclick="window.open('CGHS/Search_CGHS_Rate.html', '_blank');" style="cursor: pointer;">
-						<img class="img-common" src="images/cghsratelist1.png" >
-						<a href="CGHS/Search_CGHS_Rate.html" target="_blank" style="display: block; font-size: 0.9em;">Search CGHS Rates</a>
-					</div>
-
-					<div class=" card card-tile text-center">
-						<img class="img-common" src="images/ltc.png">
-						
-						<h4>LTC Fare Table</h4>
-					</div>
-
-					<div class=" card card-tile text-center">
-						<img class="img-common img-pension" src="images/pension.png">
-						<h4>For Pensioners</h4>
-					</div>
-
-					<div class=" card card-tile text-center" onclick="window.open('CGHS/Search_Hospital.html', '_blank');" style="cursor: pointer;">
-						<img class="img-common" src="images/hospital.png">
-						<a href="CGHS/Search_Hospital.html" target="_blank" style="display: block; font-size: 0.9em;">Search Hospitals</a>
-					</div>
-
+				<div id="rateSearchInput">
+					<h4 class="headingSH">List of CGHS approved rates of Treatment/ Investigation in Delhi-NCR (as on May, 2021)</h4>
+					<p class="contentSH">Enter the Investigation or Treament Name in the Search Bar below</p>
+					<input type="text" id="rate_search_Input" placeholder="Search for CGHS approved rates .." title="Type in a name">
 				</div>
+
+				<div id="searchRateInfo">
+					<a href="https://cghs.gov.in/showfile.php?lid=3903" target="_blank">Click Here to see the complete list of Approved Rates</a>
+					<!-- This para displays the total search match counts -->
+					
+				</div>
+
 			</div>
+
+			<table id="table_Rate">
+				<thead>
+					<th id="sno_Rate">Sr. No.</th>
+					<th id="treatmentName">CGHS Treatment/ Investigation List</th>
+					<th id="rate_Non_NABH">Non- NABH /Non-NABL</th>
+					<th id="rate_NABH">NABH /NABL</th>
+				</thead>
+
+			</table>
 			
-			
+
 		</div>
 
 	</div> 
@@ -239,7 +210,7 @@
 
 
 <!-- The HamBurger Menu Modal -->
-	<div id="hhhh">
+	<div>
 				
 		<div id="myModal_hMenu" class="modal" id="modal_hMenu">
 
@@ -257,9 +228,9 @@
 							<label class="sb-item-textHM" for="AHM">Widgets</label>
 							
 							<ul>
-								<li><a href="medical_app.html">Medical Bill App</a></li>
-								<li><a href="IT_Calc/IT_calc.html">Income Tax Calculator</a></li>
-								<li><a href="Widgets/Leave Encashment.html" target="_blank">Leave Encashment</a></li>
+								<li><a href="../medical_app.html">Medical Bill App</a></li>
+								<li><a href="../IT_Calc/IT_calc.html">Income Tax Calculator</a></li>
+								<li><a href="../Widgets/Leave Encashment.html" target="_blank">Leave Encashment</a></li>
 								<li><a href="#">LTC fare Calculator</a></li>
 							</ul>
 							<!-- <h4 class="pl-2"></h5> -->
@@ -274,7 +245,7 @@
 							<label class="sb-item-textHM" for="BHM">LTC</label>
 							<ul>
 								<li><a href="#">Important Rules</a></li>
-								<li><a href="LTC/LTC_fare_80.html">LTC Fare Table</a></li>
+								<li><a href="../LTC/LTC_fare_80.html">LTC 80 Fare</a></li>
 								<li><a href="#">Other Information</a></li>
 							</ul>
 							<!-- <h4 class="pl-2"></h5> -->
@@ -288,9 +259,9 @@
 							<input type="checkbox" id="CHM"><i class="fas fa-hand-holding-medical"></i>
 							<label class="sb-item-textHM" for="CHM">CGHS Guidelines</label>
 							<ul>
-								<li><a href="content-folder/cghs-important-rules.html">Important Rules</a></li>
-								<li><a href="CGHS/Search_CGHS_Rate.html">CGHS Rate List</a></li>
-								<li><a href="CGHS/Search_Hospital.html" target="_blank" onclick="javascript:window.location.reload();">Search Hospital</a></li>
+								<li><a href="#">Important Rules</a></li>
+								<li><a href="" onclick="javascript:window.location.reload();">CGHS Rate List</a></li>
+								<li><a href="Search_Hospital.html">Search Hospital</a></li>
 							</ul>
 							<!-- <h4 class="pl-2"></h5> -->
 						</div>
@@ -345,7 +316,7 @@
 					
 						<div class="sb-item6 sb-itemHM">
 							<input type="checkbox" id="GHM"><i class="fas fa-ban"></i>
-							<label class="sb-item-textHM" for="G"><a href="content-folder/POSH.html" target="_blank" style="font-weight: normal; color:white;">Prevention of Sexual Harassment</a></label>
+							<label class="sb-item-textHM" for="G"><a href="../content-folder/POSH.html" target="_blank" style="font-weight: normal; color:white;">Prevention of Sexual Harassment</a></label>
 							
 							<!-- <h4 class="pl-2"></h5> -->
 						</div>
@@ -363,7 +334,10 @@
 <script type="text/javascript">
 	
 	document.getElementById("hMenu").addEventListener("click",show_hMenu_Modal);
+
+	document.getElementById("rate_search_Input").addEventListener("input",updateRateTable);
 </script>
 
  </body>
 </html> 
+

@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/utilities.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+	<link rel="stylesheet" type="text/css" href="widget_styling.css">
+	<script type="text/javascript" src="../js/main.js"></script>
+	<script type="text/javascript" src="../js/LE.js"></script>
+</head>
+
+<body>
+
+	<!-- Navbar -->
+	<div class="navbar" id="navbar">
+		
+		<div class="container flex-nav">
+			
+			<!-- <img src="images/CSS_logo.png" height="80"> -->
+			<h1 class="site-logo m-2">Site Name</h1>
+			
+			<nav>
+				
+				<ul id="list-nav">
+					<li><a id="home" href="../../index.html" target="_blank">Home</a></li>
+					<li><a  href="../aboutus.html" target="_blank">About Us</a></li>
+
+				</ul>
+			</nav>
+
+		</div>
+	</div>
+
+	<!-- GRID -->
+
+	<div>
+		
+		<div>
+			
+		</div>
+
+		<div class="content-area m-1 p-1 ">
+
+			<!-- <i class="fas fa-bars" id="hMenu"></i> -->
+
+			<!--------------------The Main Content Starts----------------------- -->
+			
+			<div >
+				
+				<h3 class="widget_title">LTC Leave Encashment</h3>
+				
+				<div class="div_input_LE">
+					
+
+					<div>
+						<label for="basicPay" class="label_LE">Basic Pay</label>
+						<input type="number" name="basicPay" id="basicPay" min="0" class="input_LE">
+					</div>
+
+					
+					<div>
+						<label for="DA" class="label_LE">DA Rate</label>
+						<input type="number" name="DA" id="DA" min="0" class="input_LE">
+					</div>
+
+					<div>
+						<button id="reset_LE_input" class="btn btn_reset">Reset</button>
+					</div>
+					
+
+				</div>
+
+				<h4 id="total_amt_LE" class="widget_title2"> </h4>
+				
+
+			</div>
+			
+			<br><br>
+			<div>
+				
+				<h3 class="widget_title">Leave Encashment on Retirement</h3>
+				
+				<div class="div_input_LE">
+					
+
+					<div>
+						<label for="basicPay_RLE" class="label_LE">Basic Pay</label>
+						<input type="number" name="basicPay" id="basicPay_RLE" min="0" class="input_LE media_ml">
+					</div>
+
+					
+					<div>
+						<label for="DA_RLE" class="label_LE">D.A. Rate  </label>
+						<input type="number" name="DA" id="DA_RLE" min="0" class="input_LE media_ml">
+					</div>
+
+					<div>
+							<label for="num_EL" class="label_LE">Total E.L.</label>
+							<input type="number" name="DA" id="num_EL" min="0" class="input_LE media_ml">
+					</div>
+
+					<div>
+						<label for="num_HPL" class="label_LE">Total HPL</label>
+						<input type="number" name="DA" id="num_HPL" min="0" class="input_LE media_ml">
+					</div>	
+				
+					<div>
+						<button id="reset_RLE_input" class="btn btn_reset">Reset</button>
+					</div>
+					
+
+				</div>
+				<br>
+				<h4 id="total_admissible_leave" class="widget_title2"></h4>
+				
+				<h4 id="total_amt_RLE" class="widget_title2"> </h4>
+				
+
+				<div>
+					
+				</div>
+
+			</div>
+			
+
+
+
+			<!----------------------The main content ends----------------------------- -->
+	
+		</div>
+
+	</div> 
+	<!-- Grid Ends -->
+
+	<!-- footer -->
+
+	<footer>
+		
+		
+		<div class="footer-info container">
+			
+
+			<ul>
+				<li class="my-1"><a href="#">Contact Us</a></li>
+				<li class="my-1"><a href="#">About Us</a></li>
+				<li class="my-1"><a href="#">Join and Contribute</a></li>
+			</ul>
+	
+
+		</div>
+
+	</footer>
+
+	<script type="text/javascript">
+		
+		document.addEventListener('DOMContentLoaded', ResetValues);
+		document.getElementById("basicPay").addEventListener("input",calc_LTC_LE);
+		document.getElementById("DA").addEventListener("input",calc_LTC_LE);
+		document.getElementById("reset_LE_input").addEventListener("click",ResetValues);
+
+		document.addEventListener('DOMContentLoaded', ResetValues_RLE);
+		document.getElementById("basicPay_RLE").addEventListener("input",calc_RLE);
+		document.getElementById("DA_RLE").addEventListener("input",calc_RLE);
+		document.getElementById("num_EL").addEventListener("input",calc_RLE);
+		document.getElementById("num_HPL").addEventListener("input",calc_RLE);
+		document.getElementById("reset_RLE_input").addEventListener("click", ResetValues_RLE);
+
+	</script>
+
+</body>
+</html>

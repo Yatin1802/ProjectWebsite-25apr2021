@@ -1,4 +1,4 @@
-/*@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
 /*navbar is the background of the navigation*/
 .navbar{
@@ -12,6 +12,9 @@
 	box-shadow: 5px 10px 8px #888888;
 }
 
+#hMenu{
+	display: none;
+}
 
 /*This container class limits the overall view area of the website*/
 .container{
@@ -57,15 +60,18 @@ nav{
 .flex-nav ul li a{
 	color: white;
 	margin-right: 10px;
+
 }
 
 nav>ul>li>a{
 	padding: 0;
 	margin: 20px;
+	border-bottom-color: var(--primary-color);
+	border-bottom-width: 3px;
 }
 
 nav a:hover{
-	font-size: 1.1rem;
+	font-size: 1rem;
 	border-bottom: solid;
 	border-bottom-color: white;
 	border-bottom-width: 3px; 
@@ -78,18 +84,21 @@ nav a:hover{
 
 	padding-top: 10px;
 	/*background-color: var(--primary-color);*/
-	background-color: #28a68f;
-	color: white;
+	background-color: #d1e0db;
+	color: var(--side-menu-text-color);
+	overflow-x: scroll;
+	overflow-y: auto;
 }
 
 /*This puts the icon and menu text in flex container*/
 .side-menu-flex{
 	display: flex;
 	align-items: center;
+	padding-left: 5px;
 }
 
 .side-bar i,h4{
-	font-size: 1.2rem;
+	font-size: 1rem;
 	align-items: center;
 	/*font-weight: 400;*/
 }
@@ -101,29 +110,63 @@ nav a:hover{
 
 .side-bar input:checked ~ ul{
 	display: block; /*This expands the sub menu of side bar on checking*/
-	margin:5px;
+	padding:5px;
+}
+
+input[type="checkbox"]{
+	display: none;  /*this hides the sub menu*/
+}
+
+input:checked ~ ul{
+	display: block; /*This expands the sub menu of side bar on checking*/
+	padding:5px;
 }
 
 /*This adds indentation to the sub menu items */
 .sub-item1>ul, li a{
-	color: white;
-	padding-left: 3em;
-	font-weight: 300;
-	font-size: 1em;
+	color: var(--side-menu-text-color);
+	
+	/*font-weight: bold;*/
+	font-size: 0.9em;
+	text-align: center;
+	padding-left: 1rem;
+	padding-right: 1rem;
 }
 
 
-.side-bar label:hover,a:hover{
+.side-bar label:hover,input[type="checkbox"]:hover{
 	
-	font-weight: bold; /*This accentuates the appearance of sub menu items when pointer hover over.*/
+	font-size: 1.1em; /*This accentuates the appearance of sub menu items when pointer hover over.*/
+	transition: font-size 0.3s ease-in;
+}
 
+.sb-item >ul>li:hover{
+	
+	transform: translateX(5px);
+	transition: transform 0.2s ease-out;
+}
+
+.sb-item>ul>label:hover, .sb-item >ul>li>a:hover{
+	
+	
+	background: var(--primary-color);
+	border: none;
+	margin: 8px 0px;
+	color: #fff;
+	border-radius: 10px;
+	font-size: 0.9rem;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	/*transition: font-size 0.3s ease-in;*/
+	
+
+	/*transition: background-color 0.3s ease-in;*/
 }
 
 
 .sb-item-text{
-	font-size: 1.1em;
+	font-size: 1rem;
 	padding-left: 5px;
-	
 
 }
 .side-bar{
@@ -141,9 +184,10 @@ nav a:hover{
 .grid-container{
 
 	display: grid;
-	grid-template-columns: 18% 75% 7%;
+	grid-template-columns: 20% 75% 5%;
 	grid-gap: 5px;
 	overflow: hidden;
+	min-height: 440px;
 }
 
 /*Content Area*/
@@ -199,6 +243,7 @@ nav a:hover{
 .footer{
 	height: 100px;
 }
+
 .footer-info ul{
 	display: flex;
 	justify-content: space-between;
@@ -207,3 +252,234 @@ nav a:hover{
 	margin: 0 auto;
 }
 
+.footer-info{
+      max-width: 500px;
+}
+
+/*styling hamburger menu*/
+
+
+/*media queries*/
+@media screen and (max-width: 600px) {
+ 
+
+
+  .grid-container{
+
+	display: grid;
+	grid-template-columns: 0% 95% 5%;
+	grid-gap: 5px;
+	overflow: hidden;
+	}
+
+	.card-container{
+
+	display: grid;
+	grid-template-columns: auto auto;
+	max-width: 400px;
+	grid-gap: 10px;
+	margin: 0 auto;
+	}
+
+	#hMenu{
+	display: block;
+	margin-bottom: 5px;
+	 /*position: absolute;
+  	left: 20px;
+  	top: 120px;*/
+	}	
+}
+
+/*FOOTER LAYOUT*/
+.footer{
+	height: 100px;
+}
+.footer-info ul{
+	display: flex;
+	justify-content: space-between;
+	color:white;
+	width: auto;  /**/
+	margin: 0 auto;
+}
+/*Media Query Ends*/
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 50px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal_hMenu {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+   /* Location of the box */
+  left: 0;
+  top: 0;
+  padding: none;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: var(--primary-color); /* Fallback color */
+  /*background-color: rgba(0,0,0,0.4); /* Black w/ opacity */*/
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+  border-radius: 10px;
+  border-top-width: 10px;
+  border-bottom-width: 10px;
+  border-top-color: var(--primary-color);
+  border-bottom-color: var(--primary-color); 
+}
+
+#hMenu_Modal{
+	  padding: none;
+	  margin: none;
+	  margin-right: 100px;
+	  background-color: var(--primary-color);
+	  border: 1px solid #888;
+	  width: 80%;
+	  height: 100%;
+	  border-radius: 0px;
+	  border-top-width: 0px;
+	  border-bottom-width: 0px;
+
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#close_hMenu{
+	color: white;
+  float: right;
+  font-size: 35px;
+  font-weight: bold;
+  /*margin: 5px;*/
+}
+
+#close_hMenu:hover,
+#close_hMenu:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/*This is for tHMhe multi level dropdown in the sidebar*/
+/*This adds the top margin to the sidebar menu*/
+.side-barHM{
+	
+	color: white;
+	/*background-color: var(--primary-color);*/
+	background-color: var(--primary-color);
+	overflow: auto;
+}
+
+/*This puts the icon and menu text in flex container*/
+.side-menu-flexHM{
+	display: flex;
+	align-items: center;
+	padding-left: 5px;
+}
+
+.side-barHM i,h4{
+	font-size: 1.1rem;
+	align-items: center;
+	/*font-weight: 400;*/
+}
+
+/*This is for the multi level dropdown in the sidebar*/
+.side-barHM ul, input[type="checkbox"]{
+	display: none;  /*this hides the sub menu*/
+}
+
+.side-barHM input:checked ~ ul{
+	display: block; /*This expands the sub menu of side bar on checking*/
+	padding:5px;
+}
+
+
+/*This adds indentation to the sub menu items */
+.sub-item1HM>ul, li a{
+	font-weight: 300;
+	font-size: 1rem;
+	text-align: center;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+.sb-itemHM>ul>li>a{
+	color: white;
+}
+
+.side-barHM label:hover,input[type="checkbox"]:hover{
+	
+	font-size: 1.1em; /*This accentuates the appearance of sub menu items when pointer hover over.*/
+	transition: font-size 0.3s ease-in;
+
+}
+
+.sb-itemHM >ul>li:hover{
+	
+	transform: translateX(5px);
+	transition: transform 0.2s ease-out;
+}
+
+.sb-itemHM>ul>label:hover, .sb-itemHM >ul>li>a:hover{
+	
+	
+	background: var(--primary-color);
+	border: none;
+	margin: 2px 0px;
+	color: #fff;
+	border-radius: 10px;
+	font-size: 1rem;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border: 1px solid white;
+	/*transition: font-size 0.3s ease-in;*/
+	
+
+	/*transition: background-color 0.3s ease-in;*/
+}
+
+
+.sb-item-textHM{
+	font-size: 1.1rem;
+	padding-left: 5px;
+	
+
+}
+.side-bar{
+	/*min-width: 200px;*/
+}
+
+.side-barHM{
+	padding-left: 10px;
+	/*position: fixed;*/
+}
+
+	/*footer*/
+.footer-info >ul>li>a{
+	color: white;
+}

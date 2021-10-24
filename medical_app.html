@@ -72,7 +72,7 @@
 			<nav>
 				
 				<ul>
-					<li><a  href="home.html" target="_blank">Home</a></li>
+					<li><a  href="index.html" target="_blank">Home</a></li>
 					<li><a  href="aboutus.html" target="_blank">About Us</a></li>
 
 				</ul>
@@ -91,12 +91,15 @@
 			
 			<div class="side-menu1 side-menu-flex my-1s" >
 				
-				<div class="sb-item1">
+				<div class="sb-item1 sb-item">
+
 					<input type="checkbox" id="A"><i class="fas fa-calculator"></i>
 					<label class="sb-item-text" for="A">Widgets</label>
+					
 					<ul >
-						<li><a href="#">Medical Bill App</a></li>
-						<li><a href="#">Income Tax Calculator</a></li>
+						<li><a href="medical_app.html" target="_blank">Medical Bill App</a></li>
+						<li><a href="IT_calc/IT_calc.html" target="_blank">Income Tax Calculator</a></li>
+						<li><a href="Widgets/Leave Encashment.html" target="_blank">Leave Encashment</a></li>
 						<li><a href="#">LTC fare Calculator</a></li>
 					</ul>
 					<!-- <h4 class="pl-2"></h5> -->
@@ -106,12 +109,12 @@
 
 			<div class="side-menu1 side-menu-flex my-1s" >
 				
-				<div class="sb-item2">
+				<div class="sb-item2 sb-item">
 					<input type="checkbox" id="B"><i class="fas fa-plane-departure"></i>
 					<label class="sb-item-text" for="B">LTC</label>
 					<ul>
 						<li><a href="#">Important Rules</a></li>
-						<li><a href="#">LTC Fare Table</a></li>
+						<li><a href="LTC/LTC_fare_80.html">LTC 80 Fare</a></li>
 						<li><a href="#">Other Information</a></li>
 					</ul>
 					<!-- <h4 class="pl-2"></h5> -->
@@ -119,15 +122,15 @@
 				
 			</div>
 
-			<div class="side-menu1 side-menu-flex my-1s" >
+			<div class="side-menu1 side-menu-flex  my-1s" >
 				
-				<div class="sb-item3">
+				<div class="sb-item3 sb-item">
 					<input type="checkbox" id="C"><i class="fas fa-hand-holding-medical"></i>
 					<label class="sb-item-text" for="C">CGHS Guidelines</label>
 					<ul>
 						<li><a href="#">Important Rules</a></li>
-						<li><a href="#">CGHS Rate List</a></li>
-						<li><a href="#">Search Hospital</a></li>
+						<li><a href="CGHS/Search_CGHS_Rate.html" target="_blank">CGHS Rate List</a></li>
+						<li><a href="CGHS/Search_Hospital.html" target="_blank">Search Hospital</a></li>
 					</ul>
 					<!-- <h4 class="pl-2"></h5> -->
 				</div>
@@ -136,7 +139,7 @@
 
 			<div class="side-menu1 side-menu-flex my-1s" >
 				
-				<div class="sb-item4">
+				<div class="sb-item4 sb-item">
 					<input type="checkbox" id="D"><i class="fas fa-rupee-sign"></i>
 					<label class="sb-item-text" for="D">Pay Fixation</label>
 					<ul>
@@ -152,7 +155,7 @@
 
 			<div class="side-menu1 side-menu-flex my-1s" >
 				
-				<div class="sb-item5">
+				<div class="sb-item5 sb-item">
 					<input type="checkbox" id="E"><i class="fas fa-blind"></i>
 					<label class="sb-item-text" for="E">Pensioner's Guide</label>
 					<ul>
@@ -166,7 +169,7 @@
 			
 			<div class="side-menu1 side-menu-flex my-1s" >
 				
-				<div class="sb-item6">
+				<div class="sb-item6 sb-item">
 					<input type="checkbox" id="F"><i class="fas fa-coins"></i>
 					<label class="sb-item-text" for="F">Allowances</label>
 					<ul>
@@ -178,12 +181,24 @@
 				
 			</div>
 
+			<div class="side-menu1 side-menu-flex my-1s" >
+				
+				<div class="sb-item6 sb-item">
+					<input type="checkbox" id="G"><i class="fas fa-ban"></i>
+					<label class="sb-item-text" for="G"><a href="content-folder/POSH.html" target="_blank" style="font-weight: normal; color:var(--side-menu-text-color);">Prevention of Sexual Harassment</a></label>
+					
+					<!-- <h4 class="pl-2"></h5> -->
+				</div>
+				
+			</div>
+
 		</div>
 
 		<!-- SIDE BAR ENDS -->
+
 		<div class="medical_app my-1 p-1">
 			
-
+			<i class="fas fa-bars" id="hMenu"></i>
 			<div>
 				
 
@@ -237,7 +252,7 @@
 					
 					<input class="input-box input-box-1 mb-2" list="test-name" name="input_investigation" id="input_investigation" placeholder="Test/Treatment Name" required="true">
 					<span>
-						<label for="quantity" style="margin-right: 20px; margin-left: 20px;">Quantity:</label>
+						<label for="quantity" style="margin-right: 10px; margin-left: 10px;">Quantity:</label>
 	  					<input class="input-box mb-2 input_qty" type="number" id="quantity" name="quantity" min="1" max="20" value="1" step="1" style="text-align: center;padding-bottom: 0;">
 					</span>
 					
@@ -273,7 +288,7 @@
 			<!-- <div> -->
 				
 				<table class="medical_table" id="id_medical_table">
-					<caption class="table_caption">Medical Table</caption>
+					<!-- <caption class="table_caption">Medical Table</caption> -->
 					<thead>
 						<tr>
 						    <th>S.no.</th>
@@ -307,6 +322,7 @@
 					<button class="btn btn_control" type="button" id="edit">Edit</button>
 					<button class="btn btn_control" type="button" id="insert">Insert Row</button>
 					<button class="btn btn_control" type="button" id="delete">Delete</button>
+					<button class="btn btn_control" type="button" id="resetForm">Reset Form</button>
 					<!-- <button type="button">Add to Table</button> -->
 
 
@@ -333,6 +349,128 @@
 		</div>
 
 	</footer>
+
+	<!-- The HamBurger Menu Modal -->
+	<div>
+				
+		<div id="myModal_hMenu" class="modal" id="modal_hMenu">
+
+				  <!-- Modal content -->
+		  <div class="modal-content" id="hMenu_Modal">
+		    <span id="close_hMenu">&times;</span>
+					
+					<div class="side-barHM">
+			
+					<div class="side-menu1HM side-menu-flexHM my-1s" >
+						
+						<div class="sb-item1 sb-itemHM">
+
+							<input type="checkbox" id="AHM"><i class="fas fa-calculator"></i>
+							<label class="sb-item-textHM" for="AHM">Widgets</label>
+							
+							<ul>
+								<li><a href="medical_app.html">Medical Bill App</a></li>
+								<li><a href="IT_Calc/IT_calc.html">Income Tax Calculator</a></li>
+								<li><a href="Widgets/Leave Encashment.html" target="_blank">Leave Encashment</a></li>
+								<li><a href="#">LTC fare Calculator</a></li>
+							</ul>
+							<!-- <h4 class="pl-2"></h5> -->
+						</div>
+				
+					</div>
+
+					<div class="side-menu1HM side-menu-flexHM my-1s" >
+				
+						<div class="sb-item2 sb-itemHM">
+							<input type="checkbox" id="BHM"><i class="fas fa-plane-departure"></i>
+							<label class="sb-item-textHM" for="BHM">LTC</label>
+							<ul>
+								<li><a href="#">Important Rules</a></li>
+								<li><a href="LTC/LTC_fare_80.html">LTC 80 Fare</a></li>
+								<li><a href="#">Other Information</a></li>
+							</ul>
+							<!-- <h4 class="pl-2"></h5> -->
+						</div>
+				
+					</div>
+
+					<div class="side-menu1HM side-menu-flexHM  my-1s" >
+				
+						<div class="sb-item3 sb-itemHM">
+							<input type="checkbox" id="CHM"><i class="fas fa-hand-holding-medical"></i>
+							<label class="sb-item-textHM" for="CHM">CGHS Guidelines</label>
+							<ul>
+								<li><a href="#">Important Rules</a></li>
+								<li><a href="CGHS/Search_CGHS_Rate.html">CGHS Rate List</a></li>
+								<li><a href="CGHS/Search_Hospital.html">Search Hospital</a></li>
+							</ul>
+							<!-- <h4 class="pl-2"></h5> -->
+						</div>
+				
+					</div>
+
+					<div class="side-menu1HM side-menu-flexHM my-1s" >
+				
+						<div class="sb-item4 sb-itemHM">
+							<input type="checkbox" id="DHM"><i class="fas fa-rupee-sign"></i>
+							<label class="sb-item-textHM" for="DHM">Pay Fixation</label>
+							<ul>
+								<li><a href="#">Important Rules</a></li>
+								<li><a href="#">MACP Guide</a></li>
+								<li><a href="#">Pay Matrix</a></li>
+								<li><a href="#">Other Info</a></li>
+							</ul>
+							<!-- <h4 class="pl-2"></h5> -->
+						</div>
+				
+					</div>
+
+					<div class="side-menu1HM side-menu-flexHM my-1s" >
+				
+						<div class="sb-item5 sb-itemHM">
+							<input type="checkbox" id="EHM"><i class="fas fa-blind"></i>
+							<label class="sb-item-textHM" for="EHM">Pensioner's Guide</label>
+							<ul>
+								<li><a href="#">Bhavishya Portal</a></li>
+								<li><a href="#">Other Info</a></li>
+							</ul>
+							<!-- <h4 class="pl-2"></h5> -->
+						</div>
+				
+					</div>
+			
+					<div class="side-menu1HM side-menu-flexHM my-1s" >
+				
+						<div class="sb-item6 sb-itemHM">
+							<input type="checkbox" id="FHM"><i class="fas fa-coins"></i>
+							<label class="sb-item-textHM" for="FHM">Allowances</label>
+							<ul>
+								<li><a href="#">TA Rules</a></li>
+								<li><a href="#">Other Info</a></li>
+							</ul>
+							<!-- <h4 class="pl-2"></h5> -->
+						</div>
+				
+					</div>
+
+					<div class="side-menu1HM side-menu-flexHM my-1s" >
+					
+						<div class="sb-item6 sb-itemHM">
+							<input type="checkbox" id="GHM"><i class="fas fa-ban"></i>
+							<label class="sb-item-textHM" for="G"><a href="content-folder/POSH.html" target="_blank" style="font-weight: normal; color:white;">Prevention of Sexual Harassment</a></label>
+							
+							<!-- <h4 class="pl-2"></h5> -->
+						</div>
+					
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+	</div> 
+	<!-- The Hamburger Menu Modal Dialog box ends -->
 
 	<!-- Datalist -->
 	<datalist id="test-name" class="datalistStyle">
@@ -395,7 +533,10 @@
 		// This updates the expenditure and admissible inputs as per entitlement... as selected from the entitlement drop down.
 		document.getElementById("entitlement").addEventListener("input",rateUpdate);
 
+		//This will reset the Form
+		document.getElementById("resetForm").addEventListener("click",reset_Form);
 
+		document.getElementById("hMenu").addEventListener("click",show_hMenu_Modal);
 		//Perhaps later 
 		// document.getElementById("id_medical_table").addEventListener("mouseover",highlightBackground);
 

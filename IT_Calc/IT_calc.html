@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> IT Calculation</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="ITcalcstyle.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/utilities.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+	<script type="text/javascript" src="ITcalc.js"></script>
+	<script type="text/javascript" src="DA.js"></script>
+	<script type="text/javascript" src="../js/main.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale = 1.0">
+
+	
+
+	<!-- <script type="text/javascript" src="main.js"></script> -->
+
+</head>
+<body>
+
+	<!-- Navbar -->
+	<div class="navbar" id="navbar">
+		
+		<div class="container flex-nav">
+			
+			<!-- <img src="images/CSS_logo.png" height="80"> -->
+			<h1 class="site-logo m-2">Site Name</h1>
+			
+			<nav>
+				
+				<ul id="list-nav">
+					<li><a id="home" href="index.html">Home</a></li>
+					<li><a  href="#" target="_blank">About Us</a></li>
+
+				</ul>
+			</nav>
+
+		</div>
+	</div>
+
+	<!-- GRID -->
+
+	<div class="grid-container" style="overflow:scroll;">
+		
+		<!-- SIDE BAR STARTS -->
+		
+		<div class="side-bar">
+			
+			<div class="side-menu1 side-menu-flex my-1s" >
+				
+				<div class="sb-item1 sb-item">
+
+					<input type="checkbox" id="A"><i class="fas fa-calculator"></i>
+					<label class="sb-item-text" for="A">Widgets</label>
+					
+					<ul >
+						<li><a href="../medical_app.html" target="_blank">Medical Bill App</a></li>
+						<li><a href="IT_calc.html">Income Tax Calculator</a></li>
+						<li><a href="../Widgets/Leave Encashment.html" target="_blank">Leave Encashment</a></li>
+						<li><a href="#">LTC fare Calculator</a></li>
+					</ul>
+					<!-- <h4 class="pl-2"></h5> -->
+				</div>
+				
+			</div>
+
+			<div class="side-menu1 side-menu-flex my-1s" >
+				
+				<div class="sb-item2 sb-item">
+					<input type="checkbox" id="B"><i class="fas fa-plane-departure"></i>
+					<label class="sb-item-text" for="B">LTC</label>
+					<ul>
+						<li><a href="#">Important Rules</a></li>
+						<li><a href="../LTC/LTC_fare_80.html" target="_blank">LTC 80 Fare</a></li>
+						<li><a href="#">Other Information</a></li>
+					</ul>
+					<!-- <h4 class="pl-2"></h5> -->
+				</div>
+				
+			</div>
+
+			<div class="side-menu1 side-menu-flex  my-1s" >
+				
+				<div class="sb-item3 sb-item">
+					<input type="checkbox" id="C"><i class="fas fa-hand-holding-medical"></i>
+					<label class="sb-item-text" for="C">CGHS Guidelines</label>
+					<ul>
+						<li><a href="#">Important Rules</a></li>
+						<li><a href="../CGHS/Search_CGHS_Rate.html" target="_blank">CGHS Rate List</a></li>
+						<li><a href="../CGHS/Search_Hospital.html" target="_blank">Search Hospital</a></li>
+					</ul>
+					<!-- <h4 class="pl-2"></h5> -->
+				</div>
+				
+			</div>
+
+			<div class="side-menu1 side-menu-flex my-1s" >
+				
+				<div class="sb-item4 sb-item">
+					<input type="checkbox" id="D"><i class="fas fa-rupee-sign"></i>
+					<label class="sb-item-text" for="D">Pay Fixation</label>
+					<ul>
+						<li><a href="#">Important Rules</a></li>
+						<li><a href="#">MACP Guide</a></li>
+						<li><a href="#">Pay Matrix</a></li>
+						<li><a href="#">Other Info</a></li>
+					</ul>
+					<!-- <h4 class="pl-2"></h5> -->
+				</div>
+				
+			</div>
+
+			<div class="side-menu1 side-menu-flex my-1s" >
+				
+				<div class="sb-item5 sb-item">
+					<input type="checkbox" id="E"><i class="fas fa-blind"></i>
+					<label class="sb-item-text" for="E">Pensioner's Guide</label>
+					<ul>
+						<li><a href="#">Bhavishya Portal</a></li>
+						<li><a href="#">Other Info</a></li>
+					</ul>
+					<!-- <h4 class="pl-2"></h5> -->
+				</div>
+				
+			</div>
+			
+			<div class="side-menu1 side-menu-flex my-1s" >
+				
+				<div class="sb-item6 sb-item">
+					<input type="checkbox" id="F"><i class="fas fa-coins"></i>
+					<label class="sb-item-text" for="F">Allowances</label>
+					<ul>
+						<li><a href="#">TA Rules</a></li>
+						<li><a href="#">Other Info</a></li>
+					</ul>
+					<!-- <h4 class="pl-2"></h5> -->
+				</div>
+				
+			</div>
+
+		</div>
+
+		<!-- SIDE BAR ENDS -->
+
+		<div class="content-area m-1 p-1">
+			<i class="fas fa-bars" id="hMenu"></i>
+			<!-- The Modal -->
+<!-- 			<div>
+ -->				
+				<div id="myModal" class="modal">
+
+				  <!-- Modal content -->
+				  <div class="modal-content">
+				    <span class="close">&times;</span>
+				    <form class="inputRow_modal1">
+
+				    	<div class="modal1_Row">
+					    	<label for="emp_name">Name</label>
+					    	<input class="input-box-modal1" type="text" name="name" id="emp_name">
+
+					    	<label for="emp_designation">Designation</label>
+					    	<input class="input-box-modal1" type="text" name="name" id="emp_designation">
+				    	</div>
+				    	
+				    	<div class="modal1_Row" style="line-height: 1rem;">
+				    		<label for="payLevel">Pay Level</label>
+							<select id="payLevel" name="payLevel">
+							
+								<option>Level 1</option>
+								<option>Level 2</option>
+								<option>Level 3</option>
+								<option>Level 4</option>
+								<option>Level 5</option>
+								<option>Level 6</option>
+								<option>Level 7</option>
+								<option>Level 8</option>
+								<option>Level 9</option>
+								<option>Level 10</option>
+								<option>Level 11</option>
+								<option>Level 12</option>
+								<option>Level 13</option>
+								<option>Level 13A</option>
+								<option>Level 14</option>
+								<option>Level 15</option>
+								<option>Level 16</option>
+								<option>Level 17</option>
+								<option>Level 18</option>
+							
+							</select>
+
+							<label for="cellIndex">Cell Index</label>
+							<select id="cellIndex" name="cellIndex">
+								
+							</select>
+				    	</div>
+
+				    	<div class="modal1_Row">
+					    	<label for="emp_increment">Month of Increment</label>
+					    	<select id="emp_increment">
+						   		<option>Jan</option>
+						   		<option>Jul</option>
+						   	</select>
+						   
+						   			<button type="button" class="btn btn_modal" id="personalDetails_OK">OK</button>
+						   						   
+				    	</div>
+
+					   	
+					    </form>
+					  </div>
+
+					</div>
+<!-- 				</div> The Modal Dialog box ends
+ -->		
+ 			<!-- GPF Contribution Modal Box -->
+ 			<div id="myModal_GPF" class="modal">
+ 				 <!-- Modal content -->
+				  <div class="modal-content modal-content-gpf">
+				    <span class="close" id="close_gpf">&times;</span>
+				    <fieldset class="inputRow_modal1">
+
+				    	<legend class="legend_options"> Enter GPF Contribution Details</legend>
+
+					   	<p>Please select input mode:</p>
+							
+						<div class="gpfModeInput">
+						<label for="monthly_gpf">Monthly</label>
+						  <input type="radio" id="monthly_gpf" name="gpfMode" value="Monthly">
+						 
+						  <label for="lumpsum_gpf">Lumpsum</label>
+						  <input type="radio" id="lumpsum_gpf" name="gpfMode" value="Lumpsum">
+						</div>	  
+						  
+						<div class="gpf_input" >
+							
+							<div id="gpf_inputMonthly">
+								
+								<label id="lbl_amt_monthly" for="amt_monthly">Monthly Deduction</label>
+						    	<input style="text-align: center;" class="input-box-modal1" type="text" name="amt_monthly" id="amt_monthly">
+														
+							<br>
+								<label id="lbl_num_Month" for="num_Month">Number of Months</label>
+						    	<input style="text-align: center;" class="input-box-modal1" type="number" name="num_Month" id="num_Month" min="1" max="12">
+							</div>
+
+							<div id="gpf_inputMonths">
+
+ 								<label for="lumpsumAmt">Lumpsum Amount</label>
+						    	<input class="input-box-modal1" type="number" name="lumpsum" id="lumpsumAmt" min="1" max="10000000">
+
+							</div>
+
+						   <p id="totalGPF"></p>
+						</div>
+						
+				    </fieldset>
+				    
+				    <div style="text-align:center;">
+				    	<button type="button" class="btn btn_modal" id="gpf_ok">OK</button>
+				    </div>
+				    	
+				</div>
+ 			</div>	
+ 			<!-- GPF contribution modal box ends		 -->
+
+
+ 			<!------------------------------------ Tax Deduction Modal Box ------------------------->
+ 			<div id="myModal_TD" class="modal">
+ 				 <!-- Modal content -->
+				  <div class="modal-content modal-content-gpf">
+				    <span class="close" id="close_td">&times;</span>
+				    <fieldset class="inputRow_modal1">
+
+				    	<legend class="legend_options"> Tax Deduction Details</legend>
+
+					   	<p>Please select input mode:</p>
+							
+						<div class="gpfModeInput">
+						<label for="monthly_td">Monthly Deduction</label>
+						  <input type="radio" id="monthly_td" name="tdMode" value="Monthly">
+						 
+						  <label for="lumpsum_td">Lumpsum Deduction</label>
+						  <input type="radio" id="lumpsum_td" name="tdMode" value="Lumpsum">
+						</div>	  
+						  
+						<div class="gpf_input">
+							
+							<div id="td_inputMonthly">
+								
+								<label id="lbl_td_monthly" for="amt_monthly">Monthly Tax Deducted</label>
+						    	<input style="text-align: center;" class="input-box-modal1" type="text" name="td_amt_monthly" id="td_amt_monthly">
+														
+							<br>
+								<label id="lbl_tdnum_Month" for="num_Month">Number of Months   </label>
+						    	<input style="text-align: center;" class="input-box-modal1" type="number" name="td_num_Month" id="td_num_Month" min="1" max="12">
+							</div>
+
+							<div id="td_inputMonths">
+
+ 								<label for="td_lumpsumAmt">Lumpsum Amount</label>
+						    	<input class="input-box-modal1" type="number" name="lumpsum" id="td_lumpsumAmt" min="1" max="10000000">
+
+							</div>
+
+						   <p id="totalTD" style="margin-top: 10px;"></p>
+						   <p id="HE_cess"></p>
+						   <p id="grossTD"></p>
+						</div>
+						
+				    </fieldset>
+				    
+				    <div style="text-align:center;">
+				    	<button type="button" class="btn btn_modal" id="td_ok">OK</button>
+				    </div>
+				    	
+				</div>
+ 			</div>	
+ 			<!--------------- Tax Deduction modal box ENDS	---------------->
+
+<!------------------------------------ Misc. Income Modal Box STARTS------------------------->
+ 			<div id="myModal_misc" class="modal">
+ 				 <!-- Modal content -->
+				  <div class="modal-content modal-content-gpf">
+				    <span class="close" id="close_misc">&times;</span>
+				    <fieldset class="inputRow_modal1">
+
+				    	<legend class="legend_options"> Add Misc. Income</legend>
+
+					   	<!-- <p>Please select input mode:</p> -->
+							
+						<div class="miscInput">
+
+							<div class="miscRow">
+								<label for="misc_bonus">Bonus</label>
+								<input style="margin-left: 40px;" type="number" id="misc_bonus" name="misc_bonus" value="bonus">
+							</div>
+
+							<div class="miscRow">
+								<label for="misc_honorarium">Honorarium</label>
+						  		<input  type="number" id="misc_honorarium" name="misc_honorarium" value="misc_honorarium">
+							</div>
+							
+						  	<div class="miscRow">
+						  		<label for="misc_arrears">Arrears</label>
+						  		<input style="margin-left: 35px;"  type="number" id="misc_arrears" name="misc_arrears" value="misc_arrears">
+						  	</div>
+
+						  	<div class="miscRow">
+						  		<label for="misc_ota">OTA</label>
+						  		<input style="margin-left: 55px;" type="number" id="misc_ota" name="misc_ota" value="misc_ota">
+						  	</div>
+						  	
+
+						</div>	  
+						  
+						<div class="gpf_input">
+							
+						   <p id="totalMISC"></p>
+						 
+						</div>
+						
+				    </fieldset>
+				    
+				    <div style="text-align:center;">
+				    	<button type="button" class="btn btn_modal" id="misc_ok">OK</button>
+				    </div>
+				    	
+				</div>
+ 			</div>	
+ <!-------------------------------- Misc. Income modal box ENDS	---------------------->
+
+
+<!------------------------------------------- PP and DD Modal Box STARTS------------------------------------->
+		 			
+		 			<div id="myModal_PD" class="modal">
+		 				 <!-- Modal content -->
+						  <div class="modal-content modal-content-gpf">
+						    <span class="close" id="close_pd">&times;</span>
+						    <fieldset class="inputRow_modal1">
+
+						    	<legend class="legend_options"> Personal Pay & Deputation Allowance</legend>
+
+							   	<!-- <p>Select option and fill the details:</p> -->
+									
+								<!-- <div class="gpfModeInput">
+								<label for="personalPay">Personal Pay</label>
+								  <input type="radio" id="personalPay" name="personalPay" value="personalPay">
+								 
+								  <label for="deputationAllowance">Deputation Allowance</label>
+								  <input type="radio" id="deputationAllowance" name="deputationAllowance" value="deputationAllowance">
+								</div>	 -->
+
+								<div id="btn_tab" class="tab">
+									  <button id="btn_personalPay" type="button" class="tablinks">Personal Pay</button>
+									  <button id="btn_deputationAllowance" type="button" class="tablinks">Deputation Allowance</button>
+								</div>
+
+								  <!-- ------------Personal Pay Tab -------------- -->
+								<div id="tab_personalPay" class="gpf_input">
+
+									<div class="gpfModeInput" style="margin-bottom: 15px;">
+										<label for="radio_monthly_pp">Monthly Personal Pay</label>
+										<input type="radio" id="radio_monthly_pp" name="pp" value="Monthly">
+										
+										<label for="radio_lumpsum_pp">Lumpsum Personal Pay</label>
+										<input type="radio" id="radio_lumpsum_pp" name="pp" value="Lumpsum">
+									</div>	 
+									
+									<div id="monthly_personalPay" class="gpfModeInput" style="margin-bottom: 10px;">
+										
+										<label id="lbl_td_monthly" for="pp_monthly">Monthly Personal Pay</label>
+								    	<input style="text-align: center;" class="input-box-modal1" type="text" name="pp_monthly" id="pp_monthly">
+																
+									<br>
+										<label id="lbl_tdnum_Month" for="num_Month">Number of Months   </label>
+								    	<input style="text-align: center;" class="input-box-modal1" type="number" name="pp_num_Month" id="pp_num_Month" min="1" max="12">
+									</div>
+
+									<div id="lumpsum_personalPay" class="gpfModeInput">
+
+		 								<label for="pp_lumpsumAmt">Lumpsum Amount</label>
+								    	<input class="input-box-modal1" type="number" name="lumpsum" id="pp_lumpsumAmt" min="1" max="10000000">
+
+									</div>
+
+								   <p id="totalPP" style="margin-top: 10px;"></p>
+								   <p id ="num_totalPP" style="display:none;"></p>
+
+								</div>
+
+
+								<!-- ------------------------Deputation Allowance Tab ---------------------- -->
+
+								<div id="tab_deputationAllowance" class="gpf_input">
+									
+									<div class="gpfModeInput" style="margin-bottom: 15px;">
+										
+										<label class="toggle" for="cb_DeputationAllowance">
+											Is Eligible<input type="checkbox" class="ml-3 mb-3" id="cb_DeputationAllowance"  />		
+										</label>
+
+
+										<div id="expand_Deputation">
+											<p>Select Months for the Deputation Period</p>
+											<label for="selectFromMonths">From</label>
+											<select id="selectFromMonths" name="selectFromMonths">
+												
+											</select>
+
+											<label for="selectToMonths">To</label>
+											<select id="selectToMonths" name="selectToMonths">
+												
+											</select>
+											
+											<div style="margin-top: 10px;">
+
+												<label for="selectDeputationRate">Deputation Rate</label>
+												<select id="selectDeputationRate" name="deputationRate">
+													<option>10%</option>
+												</select>
+											</div>
+										</div>
+									
+									<p id="totalDeputationAllowance">Total Deputation Allowance</p> 
+									<p id= "num_totalDeputationAllowance" style="display:none;"></p>
+									
+									</div>	
+
+								
+
+								</div>
+								
+						    </fieldset>
+						    
+						    <div style="text-align:center;">
+						    	<button type="button" class="btn btn_modal" id="ppDD_ok">OK</button>
+						    </div>
+						    	
+						</div>
+		 			</div>	
+<!------------------------------------ PP and DD modal box ENDS	------------------------------------>
+
+
+<!-- -----------------------------------------Rent Receipt Modal Box STARTS -------------------------------- -->
+
+
+				<div id="myModal_rent" class="modal">
+			 				 <!-- Modal content -->
+							  <div class="modal-content modal-content-gpf">
+							    <span class="close" id="close_rent">&times;</span>
+							    <fieldset class="inputRow_modal1">
+
+							    	<legend class="legend_options"> Rent Receipt Details</legend>
+
+								   	
+									<div id="tab_deputationAllowance" class="gpf_input">
+									
+										<div class="gpfModeInput" style="margin-bottom: 15px;">
+										
+												<p>Select Months for which Rent is paid </p>
+												<label for="selectFromRent">From</label>
+												<select id="selectFromRent" name="selectFromRent">
+													
+												</select>
+
+												<label for="selectToRent">To</label>
+												<select id="selectToRent" name="selectToRent">
+													
+												</select>
+												<br>
+												<label  for="rentInput">Monthly Rent Paid</label>
+						  						<input style="margin-top:1.2rem;" class="input-box-modal1" type="number" id="rentInput" name="rentInput" value="rentInput">
+
+										</div>	
+
+									</div>	  
+									  
+									<div class="gpf_input">
+										
+									   <p id="totalRentReceipt"></p>
+									   <p id="totalHRA"></p>
+									   <p id="totalAdmissibleRent"></p>
+
+									   <p id="num_totalRentReceipt" style="display: none;"></p>
+									   <p id="num_totalHRA" style="display: none;"></p>
+									   <p id="num_totalAdmissibleRent" style="display: none;"></p>
+									 
+									</div>
+									
+							    </fieldset>
+							    
+							    <div style="text-align:center;">
+							    	<button type="button" class="btn btn_modal" id="rent_ok">OK</button>
+							    </div>
+							    	
+							</div>
+			 			</div>	
+
+<!-- ----------------------------------------------Rent Receipt Modal Box ENDS ----------------------------------- -->
+			<div class="IT_container">
+
+				<form class="inputDetails" style="width:100%;">
+					
+					<fieldset style="width:100%;" >
+					<legend class="legend_income">Details of Service and Basic Pay</legend>
+					
+<!-- <label for="personalDetails">Click to add details</label> -->
+				<div>
+					
+					<div style="margin-top: 10px; margin-bottom: 10px;" class="inputRow">
+						
+						<button type="button" class="btn ml-3" id="personalDetails">Add Pay Details</button>
+
+					<label for="financialYear" class="ml-3"> Select the FY </label>
+					<select id="financialYear" class="drop_down_input ml-1">
+						<option>2020-21</option>
+						<option>2021-22</option>
+						<option>2022-23</option>
+						<option>2023-24</option>
+						<option>2024-25</option>
+
+					</select>
+					<div style="display:inline-flex; margin-top: 5px;">
+						<label for="emp_group" class="ml-3">Select Group</label>
+					   	<select id="emp_group" class="dropDown ml-1" >
+					   		<option>Group A</option>
+					   		<option>Group A (ad hoc)</option>
+					   		<option>Group B</option>
+					   		<option>Group B (ad hoc)</option>
+					   		<option>Group C</option>
+					   	</select>
+
+					</div>
+						
+
+					   	<div style="display:inline-flex; margin-top: 5px;">
+						   	<label for="emp_pension" class="ml-3">Pension Type</label>
+					    	<select id="emp_pension" class="drop_down_input ml-1" >
+						   		<option>Old Pension</option>
+						   		<option>NPS</option>
+						   	</select>
+					   	</div>
+				    	
+					</div>
+
+					<div style="margin-top: 10px; margin-bottom: 10px;" class="inputRow">
+						
+						<div style="display:inline-flex; margin-top: 5px;">
+							<label for="emp_cghs" class="ml-3">CGHS Deduction</label>
+				    		<select id="emp_cghs" class="drop_down_input ml-1">
+					   			<option>Yes</option>
+					   			<option>No</option>
+					   		</select>
+						</div>					
+						
+
+					   	<div style="display:inline-flex; margin-top: 5px;">
+						   	<label for="emp_transport" class="ml-3">Govt. Transport</label>
+					    	<select id="emp_transport" class="drop_down_input ml-1">
+						   		<option>No</option>
+						   		<option>Yes</option>
+						   	</select>
+					   	</div>
+					  
+
+					   	<div style="display:inline-flex; margin-top: 5px;">
+						   	<label for="emp_accomodation" class="ml-3">Govt. Accommodation</label>
+					    	<select id="emp_accomodation" class="drop_down_input ml-1">
+						   		<option>No</option>
+						   		<option>Yes</option>
+						   	</select>
+					   	</div>
+					 
+					   	<div style="display:inline-flex; margin-top: 5px;">
+					   		<label for="emp_handicap" class="ml-3">Physical Handicap</label>
+					    	<select id="emp_handicap" class="drop_down_input ml-1">
+						   		<option>No</option>
+						   		<option>Yes</option>
+						   	</select>
+					   	</div>
+					   	
+					</div>
+
+
+				</div>	
+	  
+				</fieldset> 
+				</form>
+				
+
+
+			<!-- <button id="updateTable"> Update Table</button> -->
+
+			<!-- This is the table for monthly gross income -->
+			<table id="grossIncome" contenteditable="false" class="incomeDetails">
+				
+				<thead>
+					<th>Month</th>
+					<th>Level</th>
+					<th>Cell Index</th>
+					<th>Basic Pay</th>
+					<th>DA</th>
+					<th>HRA</th>
+					<th>TA</th>
+					<th>Gross Income</th>
+				</thead>
+
+				<tbody>
+					
+
+				</tbody>
+			</table>
+
+			
+			
+			<!-- The table contains the Deduction  -->
+			<table id="deductionTable" contenteditable="true">
+				
+				<thead >
+					<th>Month</th>
+					<th>Employee Contribution</th>
+					<th>Govt. Contribution</th>
+					<th>CGHS Contribution</th>
+					<th>CGEGIS Deduction</th>
+				</thead>
+
+				<tbody>
+					
+
+				</tbody>
+			</table>
+			
+			<div class="details">
+				<div>
+					<button type="button" id="btn_GPF" type="button" class="btn btn_details ml-3"> GPF Contribution Details</button>
+				</div>
+
+				<div>
+					<button type="button" id="btn_TaxDeducted" class="btn btn_details ml-3">  Tax Deduction Details </button>
+				</div>
+
+				<div>
+					<button type="button" id="btn_miscIncome" class="btn btn_details ml-3">Misc. Income</button>
+				</div>
+				<div>
+					<button type="button" id="btn_PP" class="btn btn_details ml-3">Personal Pay/ Deputation Allowance</button>
+				</div>
+				<div>
+					<button type="button" id="btn_Rent" class="btn btn_details ml-3">Rent Receipt</button>
+				</div>
+			</div>
+			
+			<div class="info_area">
+				<!-- This is the heading for Annual Gross Income -->
+					<div class="sideInfo" id="GrossAnnualIncome">Gross Annual Income</div>
+					<div class="sideInfo" id="totalDeduction">Total Deduction</div>
+					<div class="sideInfo" id="totalGPF_contribution">Total GPF Contribution</div>
+					<div class="sideInfo" id="totalMisc_Income">Total Misc. Income</div>
+					<div class="sideInfo" id="totalPersonal_Pay">Total Personal Pay</div>
+					<div class="sideInfo" id="totalDeputationSide">Total Deputation Allowance</div>
+					<div class="sideInfo" id="totalHRAdeduction">Admissible HRA deduction</div>
+					<div class="sideInfo" id="totalTax_Deducted">Total Tax Deducted</div>
+			</div>
+		</div>
+
+		
+		</div> <!-- IT Container Ends -->
+
+	</div> 
+	<!-- Grid Ends -->
+
+	<!-- footer -->
+
+	<footer>
+		
+		
+		<div class="footer-info container">
+			
+			<ul>
+				<li class="my-1"><a href="#">Contact Us</a></li>
+				<li class="my-1"><a href="#">About Us</a></li>
+				<li class="my-1"><a href="#">Join and Contribute</a></li>
+			</ul>
+
+		</div>
+
+	</footer>
+<!-- The HamBurger Menu Modal -->
+	<div>
+				
+		<div id="myModal_hMenu" class="modal" id="modal_hMenu">
+
+				  <!-- Modal content -->
+		  <div class="modal-content" id="hMenu_Modal">
+		   
+					
+					<div class="side-barHM">
+			 		<span id="close_hMenu">&times;</span>
+					<div class="side-menu1HM side-menu-flexHM my-1s" >
+						
+						<div class="sb-item1HM sb-itemHM">
+
+							<input type="checkbox" id="AHM"><i class="fas fa-calculator"></i>
+							<label class="sb-item-textHM" for="AHM">Widgets</label>
+							
+							<ul>
+								<li><a href="medical_app.html">Medical Bill App</a></li>
+								<li><a href="IT_calc.html" onclick="javascript:window.location.reload();">Income Tax Calculator</a></li>
+								<li><a href="../Widgets/Leave Encashment.html" target="_blank">Leave Encashment</a></li>
+								<li><a href="#">LTC fare Calculator</a></li>
+							</ul>
+							<!-- <h4 class="pl-2"></h5> -->
+						</div>
+				
+					</div>
+
+					<div class="side-menu1HM side-menu-flexHM my-1s" >
+				
+						<div class="sb-item2 sb-itemHM">
+							<input type="checkbox" id="BHM"><i class="fas fa-plane-departure"></i>
+							<label class="sb-item-textHM" for="BHM">LTC</label>
+							<ul>
+								<li><a href="#">Important Rules</a></li>
+								<li><a href="../LTC/LTC_fare_80.html">LTC 80 Fare</a></li>
+								<li><a href="#">Other Information</a></li>
+							</ul>
+							<!-- <h4 class="pl-2"></h5> -->
+						</div>
+				
+					</div>
+
+					<div class="side-menu1HM side-menu-flexHM  my-1s" >
+				
+						<div class="sb-item3 sb-itemHM">
+							<input type="checkbox" id="CHM"><i class="fas fa-hand-holding-medical"></i>
+							<label class="sb-item-textHM" for="CHM">CGHS Guidelines</label>
+							<ul>
+								<li><a href="#">Important Rules</a></li>
+								<li><a href="../CGHS/Search_CGHS_Rate.html">CGHS Rate List</a></li>
+								<li><a href="../CGHS/Search_Hospital.html">Search Hospital</a></li>
+							</ul>
+							<!-- <h4 class="pl-2"></h5> -->
+						</div>
+				
+					</div>
+
+					<div class="side-menu1HM side-menu-flexHM my-1s" >
+				
+						<div class="sb-item4 sb-itemHM">
+							<input type="checkbox" id="DHM"><i class="fas fa-rupee-sign"></i>
+							<label class="sb-item-textHM" for="DHM">Pay Fixation</label>
+							<ul>
+								<li><a href="#">Important Rules</a></li>
+								<li><a href="#">MACP Guide</a></li>
+								<li><a href="#">Pay Matrix</a></li>
+								<li><a href="#">Other Info</a></li>
+							</ul>
+							<!-- <h4 class="pl-2"></h5> -->
+						</div>
+				
+					</div>
+
+					<div class="side-menu1HM side-menu-flexHM my-1s" >
+				
+						<div class="sb-item5 sb-itemHM">
+							<input type="checkbox" id="EHM"><i class="fas fa-blind"></i>
+							<label class="sb-item-textHM" for="EHM">Pensioner's Guide</label>
+							<ul>
+								<li><a href="#">Bhavishya Portal</a></li>
+								<li><a href="#">Other Info</a></li>
+							</ul>
+							<!-- <h4 class="pl-2"></h5> -->
+						</div>
+				
+					</div>
+			
+					<div class="side-menu1HM side-menu-flexHM my-1s" >
+				
+						<div class="sb-item6 sb-itemHM">
+							<input type="checkbox" id="FHM"><i class="fas fa-coins"></i>
+							<label class="sb-item-textHM" for="FHM">Allowances</label>
+							<ul>
+								<li><a href="#">TA Rules</a></li>
+								<li><a href="#">Other Info</a></li>
+							</ul>
+							<!-- <h4 class="pl-2"></h5> -->
+						</div>
+				
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+	</div> 
+	<!-- The Hamburger Menu Modal Dialog box ends -->
+	<script type="text/javascript">
+
+			//updates the Gross Table
+			// document.getElementById("updateTable").addEventListener("click", updateTable);
+
+			// The Hamburger Menu
+			document.getElementById("hMenu").addEventListener("click",show_hMenu_Modal);
+			
+			//also updates the Gross Table when the FY is changed
+			document.getElementById("financialYear").addEventListener("input",updateTable);
+
+			//opens the modal dialoag box for capturing the personal details of the user
+			document.getElementById("personalDetails").addEventListener("click",addPersonalDetails);
+
+			//the contents of the table can be edited and when each time an input is made, the table is recalculated
+			document.getElementById("grossIncome").addEventListener("input",recalculate);
+
+			//Each time any part of the table is clicked... the cell and row index of the click location is noted
+			// document.getElementById("grossIncome").addEventListener("keypress",cursorLocation);
+			document.getElementById("grossIncome").addEventListener("click",clickLocation);
+
+			//When the personal details are added by the user... the detailas are recorded and table is updated
+			document.getElementById("personalDetails_OK").addEventListener("click", sendPersonalInfo);
+
+			//When Pay Level is selected in the Modal dialog box, the cell index drop down is populated with valid cells
+			document.getElementById("payLevel").addEventListener("input", getValidCells);
+
+			//When the Cell Index drop down is selected, the global Pay Index variable is set to the selected index no. 
+			document.getElementById("cellIndex").addEventListener("input", getCellIndex);
+
+			//When Accomodation status is selected, the appropriate HRA is set
+			document.getElementById("emp_accomodation").addEventListener("input",updateHRA);
+
+			//When Handicap status is changed, the TA column is updated as per relevant rates
+			document.getElementById("emp_handicap").addEventListener("input",updateTA);
+
+			//When the transport status is changed, the TA column is updated as per relevant rates
+			document.getElementById("emp_transport").addEventListener("input",updateTA);
+
+			//The employee pension type decides the deduction
+			document.getElementById("emp_pension").addEventListener("input",pensionContribution);
+
+			//Captures the CGHS status change event, the deduction table is modified accordingly. 
+			document.getElementById("emp_cghs").addEventListener("input",cghsContribution);
+
+			//The employee group decides the CGEGIS deduction rate
+			document.getElementById("emp_group").addEventListener("input",cgegisDeduction);
+
+			//opens the modal dialoag box for capturing the GPF contribution details of the user
+			document.getElementById("btn_GPF").addEventListener("click",gpfModal);
+
+			//When the input method in GPF modal box is selected gpfContribution is called
+			document.getElementById("monthly_gpf").addEventListener("change", gpfContribution);
+			document.getElementById("lumpsum_gpf").addEventListener("change",gpfContribution);
+			//This updates the GPF contribution heading when the inputs changes
+			document.getElementById("amt_monthly").addEventListener("input",totalGPF_heading);
+			document.getElementById("num_Month").addEventListener("input",totalGPF_heading);
+			document.getElementById("lumpsumAmt").addEventListener("input",totalGPF_heading);
+						document.getElementById("gpf_ok").addEventListener("click",gpfSideBar);
+
+			//These are the event listeners for Tax Deducted Modal Box
+			document.getElementById("btn_TaxDeducted").addEventListener("click",td_Modal);
+
+			//When the input method in TD modal box is selected Tax Deduction mode is called
+			document.getElementById("monthly_td").addEventListener("change", tdContribution);
+			document.getElementById("lumpsum_td").addEventListener("change",tdContribution);
+			//These are the event listener for inputs provided in the Tax Deduction modal box
+			document.getElementById("td_amt_monthly").addEventListener("input",totalTD_heading);
+			document.getElementById("td_num_Month").addEventListener("input",totalTD_heading);
+			document.getElementById("td_lumpsumAmt").addEventListener("input",totalTD_heading);
+			// Event Listener for the Ok button in the Tax Deduction modal box
+			document.getElementById("td_ok").addEventListener("click",tdSideBar);
+
+
+			//These are the Event Listener for Misc. Income Calculation
+			document.getElementById("btn_miscIncome").addEventListener("click",misc_Modal);
+			// Event Listener for the Ok button in the Tax Deduction modal box
+			document.getElementById("misc_ok").addEventListener("click",miscSideBar);
+			//Event listeners for the input types in the misc Income modal box
+			document.getElementById("misc_bonus").addEventListener("input",totalmisc_heading);
+			document.getElementById("misc_honorarium").addEventListener("input",totalmisc_heading);
+			document.getElementById("misc_arrears").addEventListener("input",totalmisc_heading);
+			document.getElementById("misc_ota").addEventListener("input",totalmisc_heading);
+
+			//Event Listeners for PP and DD modal Box
+			document.getElementById("btn_PP").addEventListener("click",showTab);
+			
+			document.getElementById("radio_monthly_pp").addEventListener("input",personalPayInput);
+			document.getElementById("radio_lumpsum_pp").addEventListener("input",personalPayInput);
+
+			document.getElementById("pp_monthly").addEventListener("input",calcPP);
+			document.getElementById("pp_num_Month").addEventListener("input",calcPP);
+			document.getElementById("pp_lumpsumAmt").addEventListener("input",calcPP);
+
+			//Event Listener for Tab Buttons in PP and DD modal Box
+			document.getElementById("btn_personalPay").addEventListener("click",ppDD_Modal);
+			document.getElementById("btn_personalPay").addEventListener("mousedown",btnPP_style_ON);
+
+			document.getElementById("btn_deputationAllowance").addEventListener("click",showDeputationAllowance);
+			document.getElementById("btn_deputationAllowance").addEventListener("mousedown",btnDA_style_ON);
+
+			//Event Listener for Check Box in Deputation Tab
+			document.getElementById("cb_DeputationAllowance").addEventListener("input",showDeputationOptions);
+			//Event Listene for the OK button in PP DD Modal Box
+			document.getElementById("ppDD_ok").addEventListener("click",ppddSideBar);
+
+			//Event Listener for the To period drop down in DA modal box
+			document.getElementById("selectToMonths").addEventListener("input",isPeriodValid);
+			document.getElementById("selectFromMonths").addEventListener("input",calcDeputationAllowance);
+			//document.getElementById("selectDeputationRate").addEventListener("input",calcDeputationAllowance); 
+
+			//Event Listener for Rent Receipt Modal Box 
+			document.getElementById("btn_Rent").addEventListener("click",show_rent_Modal);
+			document.getElementById("selectFromRent").addEventListener("input",calcRentReceipt);
+			document.getElementById("selectToRent").addEventListener("input",calcRentReceipt);
+			document.getElementById("rentInput").addEventListener("input",calcRentReceipt);
+			document.getElementById("rent_ok").addEventListener("click",rentSideBar);
+
+		</script>
+</body>
+
+</html>

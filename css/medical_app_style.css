@@ -55,11 +55,11 @@
 }
 
 .btn_control:hover{
-	border: 2px solid;
+	border: 1px solid;
 	background: var(--form-background-color);
 	color: var(--primary-color);
-	transform: scale(1.01);
-	transition: transform 0.2s ease-in;
+	transform: scale(1);
+	transition: transform 0.2s ease-out;
 }
 
 .form_control{
@@ -292,3 +292,19 @@ background-color: #bed1c9;
 /*.footer{
 	display: block;
 }*/
+
+/*To hide the incrementor in number input type*/
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/*Number Increment styling ends*/

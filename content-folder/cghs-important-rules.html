@@ -1,17 +1,16 @@
+
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Site Name | Portal</title>
-	<meta name="viewport" content="width=device-width, initial-scale = 1.0">
-	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/utilities.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="content-styling.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/utilities.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
-	<script type="text/javascript" src="js/main.js"></script>
-
-	<!-- <script type="text/javascript" src="main.js"></script> -->
-
+	<script type="text/javascript" src="../js/main.js"></script>
 </head>
+
 <body>
 
 	<!-- Navbar -->
@@ -25,8 +24,8 @@
 			<nav>
 				
 				<ul id="list-nav">
-					<li><a id="home" href="index.html" target="_blank">Home</a></li>
-					<li><a  href="aboutus.html" target="_blank">About Us</a></li>
+					<li><a id="home" href="../index.html" target="_blank">Home</a></li>
+					<li><a  href="../aboutus.html" target="_blank">About Us</a></li>
 
 				</ul>
 			</nav>
@@ -50,9 +49,9 @@
 					<label class="sb-item-text" for="A">Widgets</label>
 					
 					<ul >
-						<li><a href="medical_app.html" target="_blank">Medical Bill App</a></li>
-						<li><a href="IT_Calc/IT_calc.html" target="_blank">Income Tax Calculator</a></li>
-						<li><a href="Widgets/Leave Encashment.html" target="_blank">Leave Encashment</a></li>
+						<li><a href="../medical_app.html" target="_blank">Medical Bill App</a></li>
+						<li><a href="../IT_Calc/IT_calc.html" target="_blank">Income Tax Calculator</a></li>
+						<li><a href="../Widgets/Leave Encashment.html" target="_blank">Leave Encashment</a></li>
 						<li><a href="#">LTC fare Calculator</a></li>
 					</ul>
 					<!-- <h4 class="pl-2"></h5> -->
@@ -67,7 +66,7 @@
 					<label class="sb-item-text" for="B">LTC</label>
 					<ul>
 						<li><a href="#">Important Rules</a></li>
-						<li><a href="LTC/LTC_fare_80.html">LTC 80 Fare</a></li>
+						<li><a href="../LTC/LTC_fare_80.html">LTC 80 Fare</a></li>
 						<li><a href="#">Other Information</a></li>
 					</ul>
 					<!-- <h4 class="pl-2"></h5> -->
@@ -81,9 +80,9 @@
 					<input type="checkbox" id="C"><i class="fas fa-hand-holding-medical"></i>
 					<label class="sb-item-text" for="C">CGHS Guidelines</label>
 					<ul>
-						<li><a href="content-folder/cghs-important-rules.html">Important Rules</a></li>
-						<li><a href="CGHS/Search_CGHS_Rate.html">CGHS Rate List</a></li>
-						<li><a href="CGHS/Search_Hospital.html" target="_blank">Search Hospital</a></li>
+						<li><a href="#">Important Rules</a></li>
+						<li><a href="../CGHS/Search_CGHS_Rate.html">CGHS Rate List</a></li>
+						<li><a href="../CGHS/Search_Hospital.html" target="_blank">Search Hospital</a></li>
 					</ul>
 					<!-- <h4 class="pl-2"></h5> -->
 				</div>
@@ -138,7 +137,7 @@
 				
 				<div class="sb-item6 sb-item">
 					<input type="checkbox" id="G"><i class="fas fa-ban"></i>
-					<label class="sb-item-text" for="G"><a href="content-folder/POSH.html" target="_blank" style="font-weight: normal; color:var(--side-menu-text-color);">Prevention of Sexual Harassment</a></label>
+					<label class="sb-item-text" for="G"><a href="../content-folder/POSH.html" target="_blank" style="font-weight: normal; color:var(--side-menu-text-color);">Prevention of Sexual Harassment</a></label>
 					
 					<!-- <h4 class="pl-2"></h5> -->
 				</div>
@@ -153,66 +152,94 @@
 
 			<i class="fas fa-bars" id="hMenu"></i>
 
-			<div class="welcome">
-				<h2>Welcome,</h2>
-				<p>This is a welcome message but I don't know what to write here so far. The text here will be a brief description of this website which still needs a lot of work. I am still typing because I need some meaningless text to visualize the look and feel of the website. </p>
+			<!--------------------The Main Content Starts----------------------- -->
+			
+			<h2>Important CGHS Rules and Guidelines</h2>
+			<p>Click on the options below open the content.</p>
 
-			</div>
-
-			<div class="direct-links text-center">
+			<div class="container_cghsRules">
 				
-				<h3>Direct Links</h3>
-
-				<div class="card-container">
-					
-					<div class=" card card-tile text-center" onclick="window.open('medical_app.html', '_blank');" style="cursor: pointer;">
-						<img class="img-common img-med" src="images/medical.png">
-						<a href="medical_app.html" target="_blank" style="font-size: 0.9em;">Medical Bill App</a> 
-						
-						
+					<div class="card_cghsRules card card-tile" onclick="window.open('CGHS_Chapters/Entitlement.html', '_blank');" style="cursor: pointer;">
+				
+					<img class="img_cghsRules" src="../images/CGHS Rules/eligibilityCard.png" alt="Loading image..." style="width:100%; object-fit: contain;">
+					<div>
+					    <h4><b>CGHS Eligibility</b></h4> 
+					    <p class="para_card" onclick="window.open('CGHS_Chapters/Entitlement.html', '_blank');" style="cursor: pointer;">Eligibility of Self and Dependents</p> 
 					</div>
-
-					<div class=" card card-tile text-center" onclick="window.open('LTC/LTC_fare_80.html', '_blank');" style="cursor: pointer;">
-						<img class="img-common" src="images/ltcfare.png">
-						<a href="LTC/LTC_fare_80.html" target="_blank" style="display: block; font-size: 0.9em;">LTC 80 Fare</a>
-					</div>
-
-					<div class=" card card-tile text-center">
-						<img class="img-common" src="images/paymatrix.png">
-
-						<h4>Pay Matrix</h4>
-					</div>
-
-					<div class=" card card-tile text-center" onclick="window.open('IT_Calc/IT_calc.html', '_blank');" style="cursor: pointer;">
-						<img class="img-common" src="images/tax.png">
-						<a href="IT_Calc/IT_calc.html" target="_blank" style="font-size: 0.9em;">Income Tax Calc</a> 
-					</div>
-
-					<div class=" card card-tile text-center" onclick="window.open('CGHS/Search_CGHS_Rate.html', '_blank');" style="cursor: pointer;">
-						<img class="img-common" src="images/cghsratelist1.png" >
-						<a href="CGHS/Search_CGHS_Rate.html" target="_blank" style="display: block; font-size: 0.9em;">Search CGHS Rates</a>
-					</div>
-
-					<div class=" card card-tile text-center">
-						<img class="img-common" src="images/ltc.png">
-						
-						<h4>LTC Fare Table</h4>
-					</div>
-
-					<div class=" card card-tile text-center">
-						<img class="img-common img-pension" src="images/pension.png">
-						<h4>For Pensioners</h4>
-					</div>
-
-					<div class=" card card-tile text-center" onclick="window.open('CGHS/Search_Hospital.html', '_blank');" style="cursor: pointer;">
-						<img class="img-common" src="images/hospital.png">
-						<a href="CGHS/Search_Hospital.html" target="_blank" style="display: block; font-size: 0.9em;">Search Hospitals</a>
-					</div>
-
 				</div>
+
+				<div class="card_cghsRules card card-tile" onclick="window.open('CGHS_Chapters/Referral.html', '_blank');" style="cursor: pointer;">
+				
+					<img class="img_cghsRules" src="../images/CGHS Rules/referral.png" alt="Loading image..." style="width:100%; object-fit: contain;">
+					<div>
+					    <h4><b>Referral & Treatment</b></h4> 
+					    <p class="para_card" onclick="window.open('CGHS_Chapters/Referral.html', '_blank');" style="cursor: pointer;">OPD treatment from empanelled Hospital</p> 
+					</div>
+				</div>
+
+				<div class="card_cghsRules card card-tile" onclick="window.open('CGHS_Chapters/Reimbursement.html', '_blank');" style="cursor: pointer;">
+				
+					<img  class="img_cghsRules" src="../images/CGHS Rules/Reimbursement.png" alt="Loading image..." style="width:100%; object-fit: contain;">
+					<div>
+					    <h4><b>Bill Reimbursement</b></h4> 
+					    <p class="para_card" onclick="window.open('CGHS_Chapters/Reimbursement.html', '_blank');" style="cursor: pointer;">Settlement of Medical Bills</p> 
+					</div>
+				</div>
+
+				<div class="card_cghsRules card card-tile">
+				
+					<img class="img_cghsRules" src="../images/CGHS Rules/Emergency.png" alt="Loading image..." style="width:100%; object-fit: contain;">
+					<div>
+					    <h4><b>Emergency Treatment</b></h4> 
+					    <p class="para_card">Getting treatment under Emergency or Casualty</p> 
+					</div>
+				</div>
+
+				<div class="card_cghsRules card card-tile">
+				
+					<img class="img_cghsRules" src="../images/CGHS Rules/Pensioner.png" alt="Loading image..." style="width:100%; object-fit: contain;">
+					<div>
+					    <h4><b>For Pensioners</b></h4> 
+					    <p class="para_card">CGHS for pensioner and family pensioner</p> 
+					</div>
+				</div>
+
+				<div class="card_cghsRules card card-tile">
+				
+					<img class="img_cghsRules" src="../images/CGHS Rules/Cancer.png" alt="Loading image..." style="width:100%; object-fit: contain;">
+					<div>
+					    <h4><b>Cancer Treatment</b></h4> 
+					    <p class="para_card">Guidelines and Reimbursement</p> 
+					</div>
+				</div>
+
+				<div class="card_cghsRules card card-tile">
+				
+					<img class="img_cghsRules" src="../images/CGHS Rules/MedicalAppliances.png" alt="Loading image..." style="width:100%; object-fit: contain;">
+					<div>
+					    <h4><b>Implants and Aids</b></h4> 
+					    <p class="para_card">Procedure for various implants and medical devices</p> 
+					</div>
+				</div>
+
+				<div class="card_cghsRules card card-tile">
+				
+					<img class="img_cghsRules" src="../images/CGHS Rules/FAQ.png" alt="Loading image..." style="width:100%; object-fit: contain;">
+					<div>
+					    <h4><b>FAQs</b></h4> 
+					    <p class="para_card">Frequently Asked Questions</p> 
+					</div>
+				</div>
+
 			</div>
 			
+
 			
+
+
+
+			<!----------------------The main content ends----------------------------- -->
+	
 		</div>
 
 	</div> 
@@ -257,9 +284,9 @@
 							<label class="sb-item-textHM" for="AHM">Widgets</label>
 							
 							<ul>
-								<li><a href="medical_app.html">Medical Bill App</a></li>
-								<li><a href="IT_Calc/IT_calc.html">Income Tax Calculator</a></li>
-								<li><a href="Widgets/Leave Encashment.html" target="_blank">Leave Encashment</a></li>
+								<li><a href="../medical_app.html">Medical Bill App</a></li>
+								<li><a href="../IT_Calc/IT_calc.html">Income Tax Calculator</a></li>
+								<li><a href="../Widgets/Leave Encashment.html" target="_blank">Leave Encashment</a></li>
 								<li><a href="#">LTC fare Calculator</a></li>
 							</ul>
 							<!-- <h4 class="pl-2"></h5> -->
@@ -274,7 +301,7 @@
 							<label class="sb-item-textHM" for="BHM">LTC</label>
 							<ul>
 								<li><a href="#">Important Rules</a></li>
-								<li><a href="LTC/LTC_fare_80.html">LTC Fare Table</a></li>
+								<li><a href="../LTC/LTC_fare_80.html">LTC Fare Table</a></li>
 								<li><a href="#">Other Information</a></li>
 							</ul>
 							<!-- <h4 class="pl-2"></h5> -->
@@ -288,9 +315,9 @@
 							<input type="checkbox" id="CHM"><i class="fas fa-hand-holding-medical"></i>
 							<label class="sb-item-textHM" for="CHM">CGHS Guidelines</label>
 							<ul>
-								<li><a href="content-folder/cghs-important-rules.html">Important Rules</a></li>
-								<li><a href="CGHS/Search_CGHS_Rate.html">CGHS Rate List</a></li>
-								<li><a href="CGHS/Search_Hospital.html" target="_blank" onclick="javascript:window.location.reload();">Search Hospital</a></li>
+								<li><a href="#">Important Rules</a></li>
+								<li><a href="../CGHS/Search_CGHS_Rate.html">CGHS Rate List</a></li>
+								<li><a href="../CGHS/Search_Hospital.html" target="_blank" onclick="javascript:window.location.reload();">Search Hospital</a></li>
 							</ul>
 							<!-- <h4 class="pl-2"></h5> -->
 						</div>
@@ -345,7 +372,7 @@
 					
 						<div class="sb-item6 sb-itemHM">
 							<input type="checkbox" id="GHM"><i class="fas fa-ban"></i>
-							<label class="sb-item-textHM" for="G"><a href="content-folder/POSH.html" target="_blank" style="font-weight: normal; color:white;">Prevention of Sexual Harassment</a></label>
+							<label class="sb-item-textHM" for="G"><a href="../content-folder/POSH.html" target="_blank" style="font-weight: normal; color:white;">Prevention of Sexual Harassment</a></label>
 							
 							<!-- <h4 class="pl-2"></h5> -->
 						</div>
@@ -360,10 +387,28 @@
 	</div> 
 	<!-- The Hamburger Menu Modal Dialog box ends -->
 
-<script type="text/javascript">
-	
-	document.getElementById("hMenu").addEventListener("click",show_hMenu_Modal);
-</script>
 
- </body>
-</html> 
+
+
+	<!----------------------The code for Accordion----------------------->
+	<script>
+	var acc = document.getElementsByClassName("accordion");
+	var i;
+
+	for (i = 0; i < acc.length; i++) {
+	  acc[i].addEventListener("click", function() {
+	    this.classList.toggle("active");
+	    var panel = this.nextElementSibling;
+	    if (panel.style.maxHeight) {
+	      panel.style.maxHeight = null;
+	    } else {
+	      panel.style.maxHeight = panel.scrollHeight + "px";
+	    } 
+	  });
+	}
+
+	document.getElementById("hMenu").addEventListener("click",show_hMenu_Modal);
+	</script>
+	<!-----------------------The Code for Accordion Ends--------------=-->
+</body>
+</html>

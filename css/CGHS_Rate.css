@@ -1,0 +1,123 @@
+
+
+
+#table_Rate{
+
+	margin-top: 1rem;
+	min-width: 90%;
+	border-collapse: collapse;
+	display: none;
+	/*overflow: auto;*/
+
+}
+
+.rateSearchInput{
+	display: flex;
+	outline: none;
+	
+}
+
+#sno_Rate{
+	text-align: center;
+}
+
+#rate_Non_NABH{
+	text-align: center;
+}
+#rate_NABH{
+	text-align: center;
+}
+/*The Search Bar*/
+#rate_search_Input{
+	background-image: url('../images/search_icon.png');
+ 	background-repeat: no-repeat;
+	width: 100%;
+	font-size: 0.9rem;
+	padding: 12px 20px 12px 40px;
+  border-top:  2px solid var(--primary-color);
+  border-bottom: 3px solid var(--primary-color);
+  border-left: 3px solid var(--primary-color);
+  border-right: 2px solid var(--primary-color);
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 20px;
+  margin-bottom: 12px;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+}
+
+/*When the search bar is clicked the background-color changes*/
+#rate_search_Input:focus{
+	background-color: #e4f2ee;
+	color: var(--side-menu-text-color);
+	outline: none;
+	box-shadow: 5px 5px 4px #888888;
+}
+
+#searchRateInfo{
+	flex: 20%;
+  margin-left: 20px;
+  margin-top: 20px;
+  padding: 5px 3px;
+  border-left: 5px var(--primary-color) solid;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: #a7cfc5;
+  color: var(--primary-color);
+  font-size: 0.9em;
+  height: 100px;
+  color: green;
+}
+
+/*The anchor are bold... making them normal*/
+#searchRateInfo,a{
+	font-weight: normal;
+}
+/*Making anchor text bold when hover*/
+#searchRateInfo,a:hover{
+	font-weight: bold;
+}
+#searchRateInfo:hover{
+	box-shadow: 5px 5px 4px #888888;
+}
+
+/*media queries*/
+@media screen and (max-width: 600px) {
+
+#searchRateInfo{
+	margin-left: 0;
+	/*This needs checking*/
+	margin-bottom: 20px;
+	padding: 5px 0px;
+	/*max-height: 60px;*/
+	padding-left: 3px;
+}
+
+#table_Rate{
+ 	/*margin-top: 1rem;*/
+ 	width: 100%;
+ 	font-size: 0.8rem;
+ 	overflow: auto;
+ }
+
+
+ #sno_Rate{
+	width: auto;
+	min-width: 30px;
+}
+
+#rate_Non_NABH{
+	width: auto;
+	max-width: 80px;
+}
+#rate_NABH{
+	width: auto;
+	max-width: 80px;
+}
+#treatmentName{
+
+}
+}

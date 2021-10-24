@@ -13,6 +13,7 @@
  --primary-color: #0c695f;
  --secondary-color:#28a68f;
  --form-background-color:#dfe8e4;
+ --side-menu-text-color:#48574f;
 }
 
 /*General Styling for body elements*/
@@ -113,7 +114,21 @@ footer{
 	
 }
 
+/*To hide the incrementor in number input type*/
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/*Number Increment styling ends*/
 
 /*margin top and botton*/
 
@@ -187,6 +202,10 @@ footer{
 .ml-4{
 	margin-left: 20px;
 }
+
+.ml-5{
+	margin-left: 4rem;
+}
 /*padding top and bottom*/
 
 .py-1{
@@ -210,6 +229,10 @@ footer{
 }
 
 /*padding on all sides*/
+
+.p-zero{
+	padding: 0.2rem;
+}
 
 .p-1{
 	padding: 1rem;
@@ -248,5 +271,26 @@ footer{
 }
 
 .pl-5{
+	padding-left: 4rem;
+}
+
+/*padding on right sides*/
+
+.pr-1{
+	margin-left: 0.2rem;
+}
+.pr-2{
+	padding-left: 0.5rem;
+}
+
+.pr-3{
+	padding-left: 1rem;
+}
+
+.pr-4{
+	padding-left: 3rem;
+}
+
+.pr-5{
 	padding-left: 4rem;
 }
