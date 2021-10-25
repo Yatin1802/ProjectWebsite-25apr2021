@@ -45,7 +45,7 @@ function calc_LTC_LE(){
 			var calc_Amt = Math.round((basic_pay*(1+DA_rate/100))/3);
 			Amt_Text.innerHTML = "The Total Leave Encashment is Rs " +calc_Amt + "/-  (" + inWords(calc_Amt) +")";
 			DA_amt = Math.round(basic_pay*DA_rate/100);
-			DA_rate_Text.innerHTML = "The DA rate is Rs " + DA_amt + "/-";
+			DA_rate_Text.innerHTML = "The amount of DA @ " + DA_rate + "% is Rs " + DA_amt + "/-";
 		}
 
 		else{
