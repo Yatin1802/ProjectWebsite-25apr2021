@@ -57,6 +57,11 @@
 	align-content:flex-start;
 
 }
+	
+	.input_LE{
+	 margin:0;
+	margin-left:1rem;
+	}
 
 .media_ml{
 
