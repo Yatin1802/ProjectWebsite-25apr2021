@@ -4,10 +4,12 @@ function ResetValues() {
 	var basic_pay = document.getElementById("basicPay");
 	var DA_rate = document.getElementById("DA");
 	var Amt_Text = document.getElementById("total_amt_LE");
+	var DA_rate_Text = document.getElementById("total_amt_DA");
 
 	basic_pay.value="";
 	DA_rate.value = "";
 	Amt_Text.innerHTML="";
+	DA_rate_Text.innerHTML = "";
 }
 
 function ResetValues_RLE() {
@@ -32,14 +34,18 @@ function calc_LTC_LE(){
 
 	var basic_pay = parseInt(document.getElementById("basicPay").value);
 	var DA_rate = parseInt(document.getElementById("DA").value);
+	var DA_amt = 0;
 	var Amt_Text = document.getElementById("total_amt_LE");
-
+	var DA_rate_Text = document.getElementById("total_amt_DA");
+	
 	if (basic_pay>=0) {
 
 		if (DA_rate>=0) {
 
 			var calc_Amt = Math.round((basic_pay*(1+DA_rate/100))/3);
 			Amt_Text.innerHTML = "The Total Leave Encashment is Rs " +calc_Amt + "/-  (" + inWords(calc_Amt) +")";
+			DA_amt = Math.round(basic_pay*DA_rate);
+			DA_rate_Text.innerHTML = "The DA rate is Rs "+ DA_amt + "/-";
 
 		}
 
@@ -52,6 +58,8 @@ function calc_LTC_LE(){
 	}
 	// console.log(basic_pay);
 }
+
+
 
 function calc_RLE(){
 
