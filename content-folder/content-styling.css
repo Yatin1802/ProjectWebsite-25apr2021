@@ -1,4 +1,16 @@
 
+.sb-imp-rules{
+
+  max-height: 100px;
+  overflow: hidden;
+}
+
+body{
+  overflow: scroll;
+  height: auto;
+  max-height: 700px;
+}
+
 .accordion {
   background-color: #d1e0db;
   color: #444;
@@ -206,6 +218,9 @@ ul.a {
 /*media queries*/
 @media screen and (max-width: 600px) {
 
+body{
+  max-height: 1000px;
+}
 .grid_CGHS_Chapters{
 
   grid-template-columns: 5% 90% 5%;
