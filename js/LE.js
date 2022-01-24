@@ -8,7 +8,9 @@ function ResetValues() {
 	basic_pay.value="";
 	DA_rate.value = "";
 	Amt_Text.innerHTML="";
+
 	DA_rate_Text.innerHTML = " ";
+	DA_rate_Text.innerHTML = "";
 }
 
 function ResetValues_RLE() {
