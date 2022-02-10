@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="content-styling.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/utilities.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+	<script type="text/javascript" src="../js/main.js"></script>
+	<script type="text/javascript" src="../js/payMatrix.js"></script>
+	<script type="text/javascript" src="../js/payMatrixDB.js"></script>
+</head>
+
+<body>
+
+	<!-- Navbar -->
+	<div class="navbar" id="navbar">
+		
+		<div class="container flex-nav">
+			
+			<!-- <img src="images/CSS_logo.png" height="80"> -->
+			<h1 class="site-logo m-2">Site Name</h1>
+			
+			<nav>
+				
+				<ul id="list-nav">
+					<li><a id="home" href="../../index.html" target="_blank">Home</a></li>
+					<li><a  href="../aboutus.html" target="_blank">About Us</a></li>
+
+				</ul>
+			</nav>
+
+		</div>
+	</div>
+
+	<!-- GRID -->
+
+	<div class="grid_CGHS_Chapters">
+		
+		<div>
+			
+		</div>
+
+		<div class="content-area m-1 p-1 ">
+
+			<!-- <i class="fas fa-bars" id="hMenu"></i> -->
+
+			<!--------------------The Main Content Starts----------------------- -->
+			
+			<h2 style="font-weight:bold;">Pay Matrix (7th CPC)</h2>
+			<p>Click on the options below open the content.</p>
+
+			<div class="container_cghsRules container_cghsChapters">
+				
+					
+				<details class="style2">
+				  <summary>Pay Level 1 to Pay Level 5</summary>
+				  <div class="content">
+				    
+				  	<table id="idPayLevel_1to5" class="payMatrixTable">
+				  		
+				  		<thead>
+				  			<tr>
+				  				<th>Index</th>
+				  				<th>Level 1</th>
+				  				<th>Level 2</th>
+				  				<th>Level 3</th>
+				  				<th>Level 4</th>
+				  				<th>Level 5</th>
+				  			</tr>
+				  		</thead>
+
+				  	</table>
+
+				  </div>
+				</details>
+
+				<details class="style2">
+				  <summary>Pay Level 6 to Pay Level 10</summary>
+				  <div class="content">
+
+				    <table id="idPayLevel_6to10" class="payMatrixTable">
+				  		
+				  		<thead>
+				  			<tr>
+				  				<th>Index</th>
+				  				<th>Level 6</th>
+				  				<th>Level 7</th>
+				  				<th>Level 8</th>
+				  				<th>Level 9</th>
+				  				<th>Level 10</th>
+				  			</tr>
+				  		</thead>
+
+				  	</table>
+
+				  </div>
+				</details>
+
+				<details class="style2">
+				  <summary>Pay Level 11 to Pay Level 14</summary>
+				  <div class="content">
+
+				  	<table id="idPayLevel_11to14" class="payMatrixTable">
+				  		
+				  		<thead>
+				  			<tr>
+				  				<th>Index</th>
+				  				<th>Level 11</th>
+				  				<th>Level 12</th>
+				  				<th>Level 13</th>
+				  				<th>Level 13A</th>
+				  				<th>Level 14</th>
+				  			</tr>
+				  		</thead>
+
+				  	</table>
+				    
+				  </div>
+				</details>
+
+				<details class="style2">
+				  <summary>Pay Level 15 to Pay Level 18</summary>
+				  <div class="content">
+
+				  	<table id="idPayLevel_15to18" class="payMatrixTable">
+				  		
+				  		<thead>
+				  			<tr>
+				  				<th>Index</th>
+				  				<th>Level 15</th>
+				  				<th>Level 16</th>
+				  				<th>Level 17</th>
+				  				<th>Level 18</th>
+				  				
+				  			</tr>
+				  		</thead>
+
+				  	</table>
+				    
+				  </div>
+				</details>
+
+								
+<!-- -------------------------------------- -->
+
+			</div>
+			
+
+			
+
+
+
+			<!----------------------The main content ends----------------------------- -->
+	
+		</div>
+
+	</div> 
+	<!-- Grid Ends -->
+
+	<!-- footer -->
+
+	<footer>
+		
+		
+		<div class="footer-info container">
+			
+
+			<ul>
+				<li class="my-1"><a href="#">Contact Us</a></li>
+				<li class="my-1"><a href="#">About Us</a></li>
+				<li class="my-1"><a href="#">Join and Contribute</a></li>
+			</ul>
+	
+
+		</div>
+
+	</footer>
+
+
+
+	<!----------------------The code for Accordion----------------------->
+	<script>
+	var acc = document.getElementsByClassName("accordion");
+	var i;
+
+	for (i = 0; i < acc.length; i++) {
+	  acc[i].addEventListener("click", function() {
+	    this.classList.toggle("active");
+	    var panel = this.nextElementSibling;
+	    if (panel.style.maxHeight) {
+	      panel.style.maxHeight = null;
+	    } else {
+	      panel.style.maxHeight = panel.scrollHeight + "px";
+	    } 
+	  });
+	}
+	
+
+	document.addEventListener('DOMContentLoaded',loadPayMatrixTable);
+	</script>
+	<!-----------------------The Code for Accordion Ends--------------=-->
+</body>
+</html>

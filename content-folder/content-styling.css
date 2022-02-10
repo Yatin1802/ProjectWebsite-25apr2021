@@ -107,6 +107,34 @@ p,h2,ul,li{
 
 }
 
+table{
+  border-collapse: collapse;
+  border: 1px solid;
+  border-color: teal;
+}
+
+/*Pay Matrix Table Styling*/
+
+.payMatrixTable{
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.payMatrixTable tr:hover{
+  background-color: var(--table-row-background-color);
+}
+
+.payMatrixTable th{
+  
+  padding: 5px;
+}
+
+.payMatrixTable td{
+  border: none;
+  border-bottom: solid 1px teal;
+}
+
 /*--------CGHS Rules Styling Card-------*/
 .card_cghsRules {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -223,7 +251,7 @@ body{
 }
 .grid_CGHS_Chapters{
 
-  grid-template-columns: 5% 90% 5%;
+  grid-template-columns: 2% 96% 2%;
 }
 
 .container_cghsRules {
