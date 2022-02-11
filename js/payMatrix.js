@@ -23,7 +23,7 @@ function loadMatrix_1to5() {
 	for (var i = 0; i < totalRow; i++) 
 	{
 		// console.log(i);
-		var newRow = table_1to5.insertRow(i+1);
+		var newRow = table_1to5.insertRow(i+2);
 
 
 		var cell0 = newRow.insertCell(0);
@@ -55,7 +55,7 @@ function loadMatrix_6to10() {
 	for (var i = 0; i < totalRow; i++) 
 	{
 		// console.log(i);
-		var newRow = table_6to10.insertRow(i+1);
+		var newRow = table_6to10.insertRow(i+2);
 
 
 		var cell0 = newRow.insertCell(0);
@@ -87,7 +87,7 @@ function loadMatrix_11to14() {
 	for (var i = 0; i < totalRow; i++) 
 	{
 		console.log(i);
-		var newRow = table_11to14.insertRow(i+1);
+		var newRow = table_11to14.insertRow(i+2);
 
 
 		var cell0 = newRow.insertCell(0);
@@ -152,7 +152,7 @@ function loadMatrix_15to18() {
 	for (var i = 0; i < totalRow; i++) 
 	{
 		console.log(i);
-		var newRow = table_15to18.insertRow(i+1);
+		var newRow = table_15to18.insertRow(i+2);
 
 
 		var cell0 = newRow.insertCell(0);

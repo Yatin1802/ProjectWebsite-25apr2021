@@ -114,11 +114,15 @@ table{
 }
 
 /*Pay Matrix Table Styling*/
+.tablePM{
+  overflow-x: scroll;
+}
 
 .payMatrixTable{
   width: 100%;
   text-align: center;
   margin-top: 10px;
+  overflow-x: scroll;
 }
 
 .payMatrixTable tr:hover{
@@ -126,14 +130,22 @@ table{
 }
 
 .payMatrixTable th{
-  
   padding: 5px;
+  border-color: var(--primary-color);
 }
 
 .payMatrixTable td{
   border: none;
   border-bottom: solid 1px teal;
 }
+
+
+.gradePayRow{
+
+  background-color: var(--primary-color);
+  color: white;
+}
+
 
 /*--------CGHS Rules Styling Card-------*/
 .card_cghsRules {
@@ -276,6 +288,12 @@ body{
   border-radius: 10px;
 
 }
+
+.payMatrixTable tr{
+ font-size: 0.9em;
+}
+
+
 
 }
 
