@@ -113,7 +113,54 @@ table{
   border-color: teal;
 }
 
+label{
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+select{
+  /*background-color: #009B77;*/
+  border: none;
+  border-bottom: solid 1px darkgray;
+  color: var(--primary-color);
+  border-radius: 7px;
+  padding: 10px;
+  min-width: 100px;
+  
+}
+
+/*option:hover{
+  background-color: var(--primary-color);
+  color: whitesmoke;
+}
+*/
+select:hover{
+  background-color:#dff2f0 ;
+  border-color: var(--primary-color);
+  border-bottom: solid 2px;
+  border-top: solid 1px;
+  transform: translateY(-3px);
+  transition: 0.35s;
+
+}
+
+#basicPay_PM{
+
+  /*font-weight: bold;*/
+  padding-left: 2rem;
+  color: var(--primary-color);
+}
+
 /*Pay Matrix Table Styling*/
+
+.subHeading_PM{
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
 .tablePM{
   overflow-x: scroll;
 }
@@ -146,6 +193,17 @@ table{
   color: white;
 }
 
+/*Pay Matrix Table Select Box Styling*/
+.select_PM{
+
+
+}
+.payMatrix_Select{
+  padding: 1rem;
+  display: flex;
+  vertical-align: middle;
+  /*margin-bottom: 10px;*/
+}
 
 /*--------CGHS Rules Styling Card-------*/
 .card_cghsRules {
@@ -213,7 +271,7 @@ table{
 .grid_CGHS_Chapters{
 
   display: grid;
-  grid-template-columns: 10% 75% 10%;
+  grid-template-columns: 10% 80% 10%;
   grid-gap: 5px;
   overflow: hidden;
   min-height: 440px;
@@ -261,9 +319,20 @@ ul.a {
 body{
   max-height: 1000px;
 }
-.grid_CGHS_Chapters{
 
-  grid-template-columns: 2% 96% 2%;
+select{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  min-width: 120px;
+}
+
+#basicPay_PM{
+  text-align: center;
+}
+
+.grid_CGHS_Chapters {
+
+  grid-template-columns: 5% 90% 5%;
 }
 
 .container_cghsRules {
@@ -293,7 +362,14 @@ body{
  font-size: 0.9em;
 }
 
+.payMatrix_Select{
+  flex-direction: column;
+  margin: none;
+}
 
+.subHeading_PM{
+  margin: none;
+}
 
 }
 
@@ -361,7 +437,7 @@ details[open].style2 > summary:before {
 
 
 /* # Just Some Pretty Styles # */
-body { font-family: "Open Sans", sans-serif; padding-bottom: 400px; }
+body { font-family: "Open Sans", sans-serif; /*padding-bottom: 400px;*/ }
 img { max-width: 100%; }
 p { margin: 0; padding-bottom: 10px; }
 p:last-child { padding: 0; }

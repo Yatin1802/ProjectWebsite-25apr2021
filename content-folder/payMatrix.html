@@ -40,7 +40,7 @@
 
 	<div class="grid_CGHS_Chapters">
 		
-		<div>
+		<div style="width:1rem;">
 			
 		</div>
 
@@ -51,10 +51,56 @@
 			<!--------------------The Main Content Starts----------------------- -->
 			
 			<h2 style="font-weight:bold;">Pay Matrix (7th CPC)</h2>
-			<p>Click on the options below open the content.</p>
+			
 
 			<div class="container_cghsRules container_cghsChapters">
 				
+
+				<div class="payMatrix_Select">
+					<div>
+						<label for="payLevelPM"> Select Pay Level</label>
+					<select name="payLevelPM" id="payLevelPM" class="select_PM">
+						<option value="Level 1" selected="selected">Level 1</option>
+						<option value="Level 2">Level 2</option>
+						<option value="Level 3">Level 3</option>
+						<option value="Level 4">Level 4</option>
+
+						<option value="Level 5">Level 5</option>
+						<option value="Level 6">Level 6</option>
+						<option value="Level 7">Level 7</option>
+						<option value="Level 8">Level 8</option>
+						<option value="Level 9">Level 9</option>
+						<option value="Level 10">Level 10</option>
+						<option value="Level 11">Level 11</option>
+						<option value="Level 12">Level 12</option>
+						<option value="Level 13">Level 13</option>
+						<option value="Level 13A">Level 13A</option>
+						<option value="Level 14">Level 14</option>
+						<option value="Level 15">Level 15</option>
+						<option value="Level 16">Level 16</option>
+						<option value="Level 17">Level 17</option>
+						<option value="Level 18">Level 18</option>
+
+					</select>
+						
+					</div>
+					
+					<div>
+						<label for="cellIndexPM"> Select Cell Index</label>
+					
+						<select name="cellIndexPM" id="cellIndexPM">
+							<option></option>
+						</select>
+
+					</div>
+
+					<p id="basicPay_PM">  </p>
+					
+				</div>
+
+						
+				
+				<p class="subHeading_PM">The Pay Matrix Table Level wise</p>
 					
 				<details class="style2">
 				  <summary>Pay Level 1 to Pay Level 5</summary>
@@ -235,6 +281,8 @@
 	
 
 	document.addEventListener('DOMContentLoaded',loadPayMatrixTable);
+	document.getElementById("payLevelPM").addEventListener('change',fillCellIndex);
+	document.getElementById("cellIndexPM").addEventListener('change',getBasicPay);
 	</script>
 	<!-----------------------The Code for Accordion Ends--------------=-->
 </body>

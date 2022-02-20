@@ -1,7 +1,82 @@
 
+//this function is called when there is a selection event on 
+//the Pay Level Select Drop Down. The number of cells vary depending 
+//upon the Pay level... so it needs to be filled dynamically
+function fillCellIndex(){
+
+	var payLevel = document.getElementById("payLevelPM");
+
+	if (payLevel.selectedIndex!= -1) {
+		populateCellIndex(getCellCount(parseInt(payLevel.selectedIndex)));
+		getBasicPay();
+	}
+
+	
+
+	
+}
+
+
+//this function gets the number of cells required for the particular level selected
+function getCellCount(level_num){
+
+	var count = 0;
+	
+	for (var i = 0; i<40; i++)
+	{
+		if (Number.isInteger(Global_Pay_Matrix[i][level_num])) {
+			// console.log(Global_Pay_Matrix[level_num][i]);
+			count = count +1;
+		}
+	}
+	return count;
+}
+
+//This function populates the cell Index with the selected pay level 
+function populateCellIndex(total_cell){
+
+	var index = document.getElementById("cellIndexPM");
+ 	
+ 	//clearing drop down before adding new options
+	clearPreviousPopulation(index);
+
+ 	for(var i = 1; i<=total_cell; i++)
+ 	{
+ 		var option = document.createElement("option");
+ 		option.text = "Cell Index " + i;
+ 		index.add(option);
+ 	}	
+
+}
+
+//this function deletes the previous dynamic population 
+//so that new values can be filled based on new Pay Level selection
+function clearPreviousPopulation(index) {
+	// body...
+
+	var length = index.options.length;
+	console.log("length" + length);
+	for (i = length-1; i >= 0; i--) {
+	  index.options[i] = null;
+	}
+}
+
+function getBasicPay() {
+	// body...
+	var level = document.getElementById("payLevelPM").selectedIndex;
+	var	cell = document.getElementById("cellIndexPM").selectedIndex;
+	var BasicPay = document.getElementById("basicPay_PM");
+
+	BasicPay.innerHTML = "Basic Pay is Rs "+ Global_Pay_Matrix[cell][level]+ "/-";
+
+}
+
+
 function loadPayMatrixTable() {
 	// body...
 	console.log("here");
+
+	setInitialValues_PM();
 
 	loadMatrix_1to5();
 	loadMatrix_6to10();
@@ -9,6 +84,12 @@ function loadPayMatrixTable() {
 	loadMatrix_15to18();
 }
 
+function setInitialValues_PM()
+{
+	var payLevel = document.getElementById("payLevelPM");
+	payLevel.selectedIndex = -1;
+
+}
 
 //function to load pay level table from 1 to 5
 function loadMatrix_1to5() {
