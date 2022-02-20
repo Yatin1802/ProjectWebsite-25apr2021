@@ -3,6 +3,9 @@
 //Globar Variable for row selected at any time
 var SELECTED_ROW = -1;
 
+var EXPENDITURE = 0;
+var ADMISSIBLE = 0;
+
 //This loads the data list when the web page loads
 function loadDataList(){
 
@@ -91,6 +94,7 @@ function fillUpOnSelection(){
 		}
 	}
 	console.log(restrictEntilement.selectedIndex);	
+	storeRates();
 }
 
 //this checks if the investigation input box 
@@ -104,6 +108,28 @@ function rateUpdate(){
 	else{
 		fillUpOnSelection();
 	}
+}
+
+//this function increases the cost of test by the quantity times
+
+function multiplyRates()
+{
+	// var expenditureAmt = parseInt(document.getElementById("input_expenditure").value);
+	// var admissibleAmt = parseInt(document.getElementById("input_admissible").value);
+	var quant_val = parseInt(document.getElementById("quantity").value);
+
+	var revisedExpenditure = EXPENDITURE*quant_val;
+	var revisedAdmissible = ADMISSIBLE*quant_val;
+
+	document.getElementById("input_expenditure").value = revisedExpenditure;
+	document.getElementById("input_admissible").value = revisedAdmissible;
+
+}
+
+function storeRates()
+{
+	EXPENDITURE = parseInt(document.getElementById("input_expenditure").value);
+	ADMISSIBLE = parseInt(document.getElementById("input_admissible").value);
 }
 
 function highlightRow(e){

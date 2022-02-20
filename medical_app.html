@@ -525,9 +525,12 @@
 		document.getElementById("input_investigation").addEventListener("keyup",addOnEnter);
 
 		//This updates the input expenditure/admissible when there is a change quantity
-		document.getElementById("quantity").addEventListener("change",rateUpdate);
-
+		// document.getElementById("quantity").addEventListener("change",rateUpdate);
+		document.getElementById("quantity").addEventListener("change",multiplyRates);
 		//This check the Entitlement restricting checkbox and restricts the amount as per entitlement
+		document.getElementById("input_admissible").addEventListener("change",storeRates);
+		document.getElementById("input_expenditure").addEventListener("change",storeRates);
+
 		document.getElementById("chkBoxEntitlement").addEventListener("click",rateUpdate);
 
 		// This updates the expenditure and admissible inputs as per entitlement... as selected from the entitlement drop down.
